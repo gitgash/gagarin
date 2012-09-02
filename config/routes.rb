@@ -1,4 +1,7 @@
 Ggr::Application.routes.draw do
+  
+  match 'result' => 'result#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

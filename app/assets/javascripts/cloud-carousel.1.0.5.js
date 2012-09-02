@@ -138,13 +138,13 @@
 		$(container).bind('swiperight', this, function(event, ui)
         {
             event.preventDefault();
-            event.data.rotate(-3);
+            event.data.rotate(-1);
         });
 
         $(container).bind('swipeleft', this, function(event, ui)
         {
             event.preventDefault();
-            event.data.rotate(3);
+            event.data.rotate(1);
         });
 		$(container).bind('mouseover click',this,function(event){
 			
