@@ -135,6 +135,17 @@
 					 return false;
 				 });
 		}
+		$(container).bind('swiperight', this, function(event, ui)
+        {
+            event.preventDefault();
+            event.data.rotate(-3);
+        });
+
+        $(container).bind('swipeleft', this, function(event, ui)
+        {
+            event.preventDefault();
+            event.data.rotate(3);
+        });
 		$(container).bind('mouseover click',this,function(event){
 			
 			clearInterval(event.data.autoRotateTimer);		// Stop auto rotation if mouse over.
