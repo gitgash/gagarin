@@ -1,6 +1,8 @@
 $(document).ready(function(){
 				
-	//init_carusel();					   
+	//init_carusel();	
+	document.getElementById("carousel1").style.width=document.body.clientWidth+"px";
+	document.getElementById("carousel1").style.height=document.body.clientHeight+"px";				   
 	
 });
 
