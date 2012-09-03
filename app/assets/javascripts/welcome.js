@@ -25,6 +25,8 @@ function init_carusel(){
 function search(){
 	var str = document.getElementById("search_text").value;
 	var carusel = document.getElementById("carousel1");
+	carusel.style.width=document.body.clientWidth;
+	carusel.style.height=document.body.clientHeight;
 	
 	$.ajax({
 	  type: "POST",
