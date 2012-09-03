@@ -1,7 +1,6 @@
 $(document).ready(function(){
 				
-	//init_carusel();
-	alert("Hello");					   
+	//init_carusel();					   
 	
 });
 
@@ -11,7 +10,7 @@ function init_carusel(){
 	$("#carousel1").CloudCarousel(		
 		{			
 		reflHeight: 56,
-		reflGap:1,    
+		reflGap:1,
 		xPos: document.body.clientWidth/2,
 		yPos: document.body.clientHeight/2-200,
 		yRadius:240,
