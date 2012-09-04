@@ -10,27 +10,27 @@
 <!-- This is the container for the carousel. -->
 <div data-role="page">
 	<div data-role="content">
-		<div class="light-opacity">
-			<table style="height:102px">
-				<tr>
-					<td style="width:100%">
-						<div class="logo"><a class="logo" href="http://3d.sputnik.ru/" title="Спутник"></a></div>
-					</td>
-					<td style="width:100%">
-						<div class="search-form">
-							<div class="search-block">
-								<input id="search_text" class="search-input" type="text" placeholder="Searh..." style="width:100px;height:30px;"/>
-							</div>
+			<i class="light-opacity"></i>
+			<div class="light-search">
+				<div class="sputnik-logo">
+					<a class="logo" href="http://3d.sputnik.ru/" title="Спутник"></a>
+				</div>
+				<div class="submit-block"><input class="submit-button" onClick="search()" type="submit" value="Найти"></div>
+				<div class="search-form">
+					<div class="search-block">
+						<input id="search_text" class="search-input" autofocus="autofocus" id="search-form" type="text" value="" spellcheck="false" maxlength="512" name="q" autocomplete="off" style="width: 100%; ">
+					</div>
+					<div class="suggest">
+						<ul class="suggest-index" role="listbox" style="top: 38px; left: 14px; z-index: 999; display: none; "></ul>
+						<div class="suggest-tander">
+							<i class="suggest-i"></i>
 						</div>
-					</td>
-					<td style="width:100%">
-						<div class="submit-block">
-							<input type="button" onClick="search()" value="Найти" class="submit-button"/>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</div>
+					</div>
+				</div>
+			</div>
+
+		
+		
 		<div id = "carousel1" style="position:relative;width:1024px;height:512px;background:#fff;overflow:scroll;z-index:0;display:none;">        
 		    <!-- All images with class of "cloudcarousel" will be turned into carousel items  -->
 		    <!-- You can place links around these images -->
