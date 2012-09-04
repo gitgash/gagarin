@@ -4,13 +4,15 @@
 
 <% content_for :content do %>
   <% if @section_code == "2223" %>
+    <label style="color:silver;font-size:24px;">Новости</label><br>
     <div class="b-project b-project_news">
     	<ol class="b-output">
+        <% @i=1 %>
 	      <% @results.each do |r| %>
-		
     			<li class="b-output__item">
-    				<a href="<%= r[:url].text %>"><%= r[:title].text %></a>
+    				<label style="color:silver;size:16px;">#<%= @i %></label>&nbsp;&nbsp;<a class="b-output__head" href="<%= r[:url].text %>"><%= r[:title].text %></a><br>
     			</li>
+          <% @i=@i+1 %>
     		<% end %>
 		  </ol>
 	  </div>
@@ -20,7 +22,7 @@
     <div class="b-project b-project_news">
       <ol class="b-output">
         <% @results.each do |r| %>
-          <a href="<%= r[:url].text %>"><%= r[:title].text %></a>
+          <a class="b-output__head" href="<%= r[:url].text %>"><%= r[:title].text %></a><br>
         <% end %>
       </ol>
     </div>

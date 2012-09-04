@@ -1,9 +1,15 @@
 $(document).ready(function(){
 				
 	//init_carusel();	
-				   
+  $(document).keydown(function(event){
+  if(event.keyCode==13){
+    search();
+  }
+  });
 	
 });
+
+
 
 
 function init_carusel(){
@@ -21,6 +27,7 @@ function init_carusel(){
 		}
 	);
 };
+var str1;
 
 function search(){
 	var str = document.getElementById("search_text").value;
@@ -28,22 +35,23 @@ function search(){
 	carusel.style.width=document.body.clientWidth+"px";
 	carusel.style.height=document.body.clientHeight+"px";
 	//alert(carusel.style.width);
-	
-	$.ajax({
-	  type: "POST",
-	  url: "result.json",
-	  data: "search="+str,
-	  success: function(msg){
-	  	document.getElementById("search_text").value="";
-	  	var data = eval(msg);
-		carusel.innerHTML="";
-	  	for(var i=0;i<data.length;i+=2){
-		    carusel.innerHTML+="<a href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
-	  	}
-		init_carusel();
-		carusel.style.display = "block";
-	 }
-	});
+	if(str1!=str){
+    $.ajax({
+      type: "POST",
+      url: "result.json",
+      data: "search="+str,
+      success: function(msg){
+        str1 = str;
+        var data = eval(msg);
+        carusel.innerHTML="";
+        for(var i=0;i<data.length;i+=2){
+		      carusel.innerHTML+="<a target='_blank' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
+	  	  }
+		  init_carusel();
+		  carusel.style.display = "block";
+	   }
+	  });
+  }
 };
 
 
