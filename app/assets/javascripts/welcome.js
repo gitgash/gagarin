@@ -5,6 +5,10 @@ $(document).ready(function(){
 	
 });
 
+$(document).keydown(function(event){
+alert(event.keyCode);
+});
+
 
 function init_carusel(){
 	// This initialises carousels on the container elements specified, in this case, carousel1.
