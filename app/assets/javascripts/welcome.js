@@ -35,6 +35,7 @@ function search(){
 	  data: "search="+str,
 	  success: function(msg){
 	  	document.getElementById("search_text").value="";
+		alert(msg);
 	  	var data = eval(msg);
 		carusel.innerHTML="";
 	  	for(var i=0;i<data.length;i+=2){

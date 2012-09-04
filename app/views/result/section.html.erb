@@ -17,23 +17,6 @@
 	</div>
 	<% end %>
 <% end %>
-
-<% if @section_code == 18 %>
-    <div class="b-project b-project_news">
-	<ol class="b-output">
-	<% @results.each do |r| %>
-			<li class="b-output__item">
-				<a href="<%= r[:url].text %>"><%= r[:url_show].text %></a>
-			</li>
-		
-		</ol>
-	</div>
-	<% end %>
-<% end %>
-
-
-<% end %>
-
 =======
   <% if @section_code == 31 %>
     <div class="b-project b-project_news">
