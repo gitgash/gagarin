@@ -6,15 +6,14 @@
     <div class="b-project b-project_news">
 		<ol class="b-output">
 	<% @results.each do |r| %>
-	<% if @section_code == 31 %>
-		<li class="b-output__item">
-			<a href="<%= r[:url].text %>"><%= r[:title].text %></a>
-		</li>
+		<% if @section == 31 %>
+			<li class="b-output__item">
+				<a href="<%= r[:url].text %>"><%= r[:title].text %></a>
+			</li>
+		<% end %>
 	<% end %>
 		</ol>
 	</div>
-		
-<% end %>
 
 <%= render :template => 'layouts/application' %>
 	
