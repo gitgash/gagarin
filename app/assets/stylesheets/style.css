@@ -4,30 +4,12 @@
 .ui-loader{
 	display:none;
 }
-
-html, body {
-	margin:0;
-	padding:0;
-	height:100%;
-} 
 body {
 	background-color:#fff;
 	font:13px/15px Arial, Helvetica, sans-serif;
 	color:#111;
 	overflow-y: scroll;
 }
-/*
-.theme_beatles {
-}
-.theme_kizhi {
-	background:url("/static/internet/img/themes/a7deaa015c8a565a10dea6649bdda941.png") 50% 50% no-repeat;
-}
-.theme_eagle {
-	background:url("/static/internet/img/themes/52009e00ec18b38f33a4736e4e2107a8.png") 50% 50% no-repeat;
-}
-.theme_baikal {
-	background:url("/static/internet/img/themes/e579a1728d76d64f28a4dc360db79c80.png") 50% 50% no-repeat;
-}*/
 a {
 	color:#007CFF;
 	text-decoration:underline;
@@ -40,10 +22,10 @@ a {
 	display:block;
 	width:131px;
 	height:65px;
-	background:url("/static/internet/img/1f397dfe564adf846df1ee14bfecb5dd.png") no-repeat scroll 0 0;
+	background:url("http://3d.sputnik.ru/static/internet/img/1f397dfe564adf846df1ee14bfecb5dd.png") no-repeat scroll 0 0;
 }
 .logo_test {
-	background:url("/static/internet/img/fe2ffd61c0e95b1b6c13558db20a0825.png") no-repeat scroll 0 0;
+	background:url("http://3d.sputnik.ru/static/internet/img/fe2ffd61c0e95b1b6c13558db20a0825.png") no-repeat scroll 0 0;
 }
 .light-bg {
 	position:relative;
@@ -172,7 +154,7 @@ a {
 	margin:7px 0 0 5px;
 	padding:0 10px;
 	list-style-type:none;
-	background:url("/static/internet/img/3e40416c0ad3e18626da08f74270c72f.png") 50% 0 no-repeat;
+	background:url("http://3d.sputnik.ru/static/internet/img/3e40416c0ad3e18626da08f74270c72f.png") 50% 0 no-repeat;
 	float:right;
 	cursor:pointer;
 	overflow:hidden;
