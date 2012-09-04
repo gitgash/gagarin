@@ -35,11 +35,10 @@ function search(){
 	  data: "search="+str,
 	  success: function(msg){
 	  	document.getElementById("search_text").value="";
-		alert(msg);
 	  	var data = eval(msg);
 		carusel.innerHTML="";
 	  	for(var i=0;i<data.length;i+=2){
-		    carusel.innerHTML+="<a href='http://"+(data[i+1])+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
+		    carusel.innerHTML+="<a href='"+(data[i+1])+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
 	  	}
 		init_carusel();
 		carusel.style.display = "block";
