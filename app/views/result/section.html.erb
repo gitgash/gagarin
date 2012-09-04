@@ -3,6 +3,7 @@
 
 
 <% content_for :content do %>
+<<<<<<< HEAD
 <% if @section_code == 2223 %>
     <div class="b-project b-project_news">
 	<ol class="b-output">
@@ -33,5 +34,38 @@
 
 <% end %>
 
+=======
+  <% if @section_code == 31 %>
+    <div class="b-project b-project_news">
+      <ol class="b-output">
+          <% @results.each do |r| %>
+            <li class="b-output__item">
+              <a href="<%= r[:url].text %>"><%= r[:title].text %></a>
+            </li>
+          <% end %>
+      </ol>
+    </div>
+
+  <% elsif @section_code == 16 %>
+    <div class="blog">
+    </div>
+
+  <% elsif @section_code == 17 %>
+    <div class="pic">
+    </div>
+
+  <% elsif @section_code == 18 %>
+    <div class="video">
+    </div>
+
+  <% else %>
+    <div class="news">
+    </div>
+
+  <% end %>
+<% end %>
+
+
+>>>>>>> 66ecaf39da42dbda5d124240cdc262b246459c32
 <%= render :template => 'layouts/application' %>
 	
