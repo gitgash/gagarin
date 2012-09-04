@@ -17,3 +17,20 @@
 	border:0 none;
 	outline:0 none;
 }
+
+.light-opacity{
+	z-index:10;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -100px;
+	width:830px;
+	height:102px;
+	margin-top:-51px;
+	background:#eee;
+	border-radius:9px;
+	filter:alpha(opacity=78);
+	opacity:0.8;
+	box-shadow:0 4px 18px rgba(0,0,0,0.75); 
+}
