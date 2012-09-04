@@ -10,18 +10,18 @@
 <!-- This is the container for the carousel. -->
 <div data-role="page">
 	<div data-role="content">
-
-		<table style="z-index:10;position: fixed;top: 50%;left: 50%;margin-top: -50px;margin-left: -100px;">
-			<tr>
-				<td>
-					<input id="search_text" type="text" placeholder="Searh..." style="width:100px;height:30px;"/>
-				</td>
-				<td>
-					<input type="button" onClick="search()" value="Найти"/>
-				</td>
-			</tr>
-		</table>
-		
+		<div style="z-index:10;position: fixed;top: 50%;left: 50%;margin-top: -50px;margin-left: -100px;">
+			<table>
+				<tr>
+					<td>
+						<input id="search_text" type="text" placeholder="Searh..." style="width:100px;height:30px;"/>
+					</td>
+					<td>
+						<input type="button" onClick="search()" value="Найти"/>
+					</td>
+				</tr>
+			</table>
+		</div>
 		<div id = "carousel1" style="position:relative;width:1024px;height:512px;background:#fff;overflow:scroll;z-index:0;display:none;">        
 		    <!-- All images with class of "cloudcarousel" will be turned into carousel items  -->
 		    <!-- You can place links around these images -->
