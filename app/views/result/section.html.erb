@@ -1,0 +1,12 @@
+<% content_for :javascript do %>
+<% end %>
+
+
+<% content_for :content do %>
+	<% @results.each do |r| %>
+		<a href="<%= r[:url].text %>"><%= r[:title].text %></a><br/>
+	<% end %>
+<% end %>
+
+<%= render :template => 'layouts/application' %>
+	

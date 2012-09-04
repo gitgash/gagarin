@@ -27,7 +27,7 @@ function search(){
 	var carusel = document.getElementById("carousel1");
 	carusel.style.width=document.body.clientWidth+"px";
 	carusel.style.height=document.body.clientHeight+"px";
-	alert(carusel.style.width);
+	//alert(carusel.style.width);
 	
 	$.ajax({
 	  type: "POST",

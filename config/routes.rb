@@ -1,6 +1,7 @@
 Ggr::Application.routes.draw do
   
-  match 'result' => 'result#index'
+  match 'result' => 'result#index', :as => :result
+  match 'result/section/:id' => 'result#section', :as => :result_section
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
