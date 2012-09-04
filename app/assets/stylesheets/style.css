@@ -4,3 +4,16 @@
 .ui-loader{
 	display:none;
 }
+.submit-button{
+	width:90px;
+	height:40px;
+	margin:0;
+	padding:0;
+	font:normal 18px/40px Arial, Helvetica, sans-serif;
+	color:#555;
+	background:none transparent;
+	display:block;
+	cursor:pointer;
+	border:0 none;
+	outline:0 none;
+}
