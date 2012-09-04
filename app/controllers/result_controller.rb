@@ -49,7 +49,7 @@ class ResultController < ApplicationController
       
       @results = Array.new
       sec.xpath("result").each do |r|
-        @results << {:url => r.xpath('url'), :title => r.xpath('title'), :url_show => r.xpath('url_show'), :title_show => r.xpath('title_show')}
+        @results << {:url => r.xpath('url'), :title => r.xpath('title'), :url_show => r.xpath('url_show'), :title_show => r.xpath('title_show'), :snippet => r.xpath('snippet')}
       end
     end
     @section_code=params[:id]
