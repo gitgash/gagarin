@@ -6,6 +6,7 @@
     <div class="b-project b-project_news">
 		<ol class="b-output">
 	<% @results.each do |r| %>
+	<% if @section_code == 31 %>
 		<li class="b-output__item">
 			<a href="<%= r[:url].text %>"><%= r[:title].text %></a>
 		</li>
