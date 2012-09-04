@@ -21,7 +21,7 @@
     <div class="b-project b-project_news">
       <ol class="b-output">
         <% @results.each do |r| %>
-          <a href="<%= r[:url].text %>"><%= r[:title].text %></a>
+          <a class="b-output__head" href="<%= r[:url].text %>"><%= r[:title].text %></a><br>
         <% end %>
       </ol>
     </div>
