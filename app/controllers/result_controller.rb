@@ -19,9 +19,12 @@ class ResultController < ApplicationController
       
       #collect sections
       uri = URI(request.url)
+      u = uri.to_s
+      u['result.json'] = ''
+      p "DEBUG+++++++++++++++++++++++++++++++++++++++++++++++++++++"+u
       doc.xpath('//query').each do |q|
         ret << "#{result_section_path(:id => q['collection'])}.jpg?search=#{URI.encode params[:search]}"
-        ret << "#{uri.scheme}://#{uri.host}#{result_section_path(:id => q['collection'])}.html?search=#{URI.encode params[:search]}"
+        ret <<  u + "#{result_section_path(:id => q['collection'])}.html?search=#{URI.encode params[:search]}"
       end
 
     end
