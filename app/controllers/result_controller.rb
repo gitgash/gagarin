@@ -62,8 +62,8 @@ class ResultController < ApplicationController
         uri.path = s
         uri.port = 3003
         p "DEBUGG>>> uri="+uri.to_s
-        #contents = IMGKit.new(uri.to_s)
-        contents = IMGKit.new("http://www.google.com")
+        contents = IMGKit.new(uri.to_s)
+        #contents = IMGKit.new("http://www.google.com")
         #File.open("img.jpg", 'w') {|f| f.write(contents.to_img(:jpg)) }
         send_data contents.to_img(:jpg), :filename => "#{params[:id]}.jpg", 
                                         :disposition => 'inline', 
