@@ -1,13 +1,15 @@
 $(document).ready(function(){
 				
 	//init_carusel();	
-				   
+  $(document).keydown(function(event){
+  if(event.keyCode==13){
+    search();
+  }
+  });
 	
 });
 
-$(document).keydown(function(event){
-alert(event.keyCode);
-});
+
 
 
 function init_carusel(){
