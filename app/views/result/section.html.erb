@@ -9,7 +9,7 @@
         <% @i=1 %>
 	      <% @results.each do |r| %>
     			<li class="b-output__item">
-    				<label style="color:silver;size:16px;">#<%= @i %></label>&nbsp;&nbsp;<a style="underline:none;" href="<%= r[:url].text %>"><%= r[:title].text %></a><br>
+    				<label style="color:silver;size:16px;">#<%= @i %></label>&nbsp;&nbsp;<a class="b-output__head" href="<%= r[:url].text %>"><%= r[:title].text %></a><br>
     			</li>
           <% @i=@i+1 %>
     		<% end %>
