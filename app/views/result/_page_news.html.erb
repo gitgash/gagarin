@@ -1,5 +1,15 @@
-<%= results.count %>
-
-<% results.each do |result| %>
-  <a href="<%= result[:url].text %>"><%= result[:title].text %></a>
-<% end %>
+<label style="color:silver;font-size:24px;">Новости</label><br><br>
+<div class="b-project b-project_news">
+  <ol class="b-output">
+    <% @i=1 %>
+    <% results.each do |r| %>
+      <li class="b-output__item">
+        <label style="color:silver;size:16px;">#<%= @i %></label>&nbsp;&nbsp;<a class="b-output__head" href="<%= r[:url].text %>"><%= r[:title].text %></a><br>
+      <div class="b-output__snippet">
+        <%= r[:snippet].text %>
+      </div>
+      </li>
+      <% @i=@i+1 %>
+    <% end %>
+  </ol>
+</div>

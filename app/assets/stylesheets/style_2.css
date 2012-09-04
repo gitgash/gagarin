@@ -12,3 +12,17 @@
 	margin-bottom: 10px;
 	display: block;
 }
+.b-head__link:hover {
+	color: #333;
+}
+.b-output__snippet {
+	padding: 0;
+}
+.b-output__head {
+	margin: 0;
+	padding-bottom: 5px;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: normal;
+	position: relative;
+}
