@@ -10,18 +10,27 @@
 <!-- This is the container for the carousel. -->
 <div data-role="page">
 	<div data-role="content">
-
-		<table style="z-index:10;position: fixed;top: 50%;left: 50%;margin-top: -50px;margin-left: -100px;">
-			<tr>
-				<td>
-					<input type="button" onClick="search()" />
-				</td>
-				<td>
-					<input id="search_text" type="text" placeholder="Searh..." style="width:100px;height:30px;"/>
-				</td>
-			</tr>
-		</table>
-		
+		<div class="light-opacity">
+			<table style="height:102px">
+				<tr>
+					<td style="padding-left:30px;margin-left:30px;">
+						<div class="logo"><a class="logo" href="http://3d.sputnik.ru/" title="Спутник"></a></div>
+					</td>
+					<td style="width:100%;padding-right:20px;margin-right:20px;">
+						<div class="search-form">
+							<div class="search-block">
+								<input id="search_text" class="search-input" type="text" placeholder="Searh..." style="width:100%;"/>
+							</div>
+						</div>
+					</td>
+					<td style="padding-right:30px;margin-right:30px;">
+						<div class="submit-block">
+							<input type="button" onClick="search()" value="Найти" class="submit-button"/>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
 		<div id = "carousel1" style="position:relative;width:1024px;height:512px;background:#fff;overflow:scroll;z-index:0;display:none;">        
 		    <!-- All images with class of "cloudcarousel" will be turned into carousel items  -->
 		    <!-- You can place links around these images -->
