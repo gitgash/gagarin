@@ -3,46 +3,50 @@
 
 
 <% content_for :content do %>
-  <% if @section_code == 2223 %>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<% if @section_code == 2223 %>
     <div class="b-project b-project_news">
-      <ol class="b-output">
-        <% @results.each do |r| %>
-
-          <li class="b-output__item">
-            <a href="<%= r[:url].text %>"><%= r[:title].text %></a>
-          </li>
-
-        <% end %>
-      </ol>
-    </div>
-
+	<ol class="b-output">
+	<% @results.each do |r| %>
+		
+			<li class="b-output__item">
+				<a href="<%= r[:url].text %>"><%= r[:title].text %></a>
+			</li>
+		
+		</ol>
+	</div>
+	<% end %>
+<% end %>
+=======
   <% if @section_code == 31 %>
     <div class="b-project b-project_news">
       <ol class="b-output">
+=======
+  <% if @section_code == "2223" %>
+    <p>2223</p>
+        <% @results.each do |r| %>
+
+    
+            <a href="<%= r[:url].text %>"><%= r[:title].text %></a>
+    
+        <% end %>
+    
+  <% elsif @section_code == "31" %>
+>>>>>>> 595580fa759b99c422b78653911adee77d354763
           <% @results.each do |r| %>
-            <li class="b-output__item">
               <a href="<%= r[:url].text %>"><%= r[:title].text %></a>
-            </li>
           <% end %>
-      </ol>
-    </div>
-
-  <% elsif @section_code == 16 %>
-    <div class="blog">
-    </div>
-
-  <% elsif @section_code == 17 %>
-    <div class="pic">
-    </div>
-
-  <% elsif @section_code == 18 %>
-    <div class="video">
-    </div>
-
+          <p>31</p>
+    
+  <% elsif @section_code == "16" %>
+    <p>16</p>
+  <% elsif @section_code == "17" %>
+    <p>17</p>
+  <% elsif @section_code == "18" %>
+    <p>18</p>
   <% else %>
-    <div class="news">
-    </div>
-
+    <p><%= @section_code %> 12345678</p>
   <% end %>
 <% end %>
 
