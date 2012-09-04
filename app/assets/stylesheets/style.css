@@ -21,7 +21,7 @@
 .light-opacity{
 	z-index:10;
 	position: fixed;
-	top: 40%;
+	top: 50%;
 	left: 50%;
 	margin-left: -415px;
 	width:830px;
@@ -63,21 +63,4 @@
 		-webkit-box-shadow:0 1px 2px #ccc;
 		-moz-box-shadow:0 1px 2px #ccc;
 		box-shadow:0 1px 2px #ccc;
-}
-
-.search-form{
-	position:relative;
-		padding:0 0 2px 0;
-		background-position:100% 0px;
-		margin:0 115px 0 138px;
-		z-index:8000;
-}
-.search-block{
-	position:relative;
-		height:40px;
-		padding:0 14px;
-		margin-bottom:6px;
-		background:#fff;
-		border:1px solid #7E7E7E;
-		z-index:8000;
 }
