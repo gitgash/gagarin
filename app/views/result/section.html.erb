@@ -4,7 +4,7 @@
 
 <% content_for :content do %>
 	<% @results.each do |r| %>
-		<a href="<%= r[:url].text %>"><%= r[:title].text %></a><br/>
+		<center><a href="<%= r[:url].text %>"><%= r[:title].text %></a></center><br/>
 	<% end %>
 <% end %>
 
