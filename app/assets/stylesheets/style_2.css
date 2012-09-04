@@ -1,0 +1,14 @@
+.b-project {
+	float: left;
+	overflow: hidden;
+}
+.b-output {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+.b-output__item {
+	margin-bottom: 10px;
+	display: block;
+}

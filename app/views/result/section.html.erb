@@ -3,9 +3,16 @@
 
 
 <% content_for :content do %>
+    <div class="b-project b-project_news">
+		<ol class="b-output">
 	<% @results.each do |r| %>
-	<center><a href="<%= r[:url].text %>"><%= r[:title_show].text %></a></center><br/>
+		<li class="b-output__item">
+			<a href="<%= r[:url].text %>"><%= r[:title].text %></a>
+		</li>
 	<% end %>
+		</ol>
+	</div>
+		
 <% end %>
 
 <%= render :template => 'layouts/application' %>
