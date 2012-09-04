@@ -3,17 +3,35 @@
 
 
 <% content_for :content do %>
-
+<% if @section_code == 2223 %>
     <div class="b-project b-project_news">
-		<ol class="b-output">
+	<ol class="b-output">
 	<% @results.each do |r| %>
+		
 			<li class="b-output__item">
-				<img src="<%= r[:url].text %>"><%= r[:title].text %></a>
+				<a href="<%= r[:url].text %>"><%= r[:title].text %></a>
 			</li>
-	<% end %>
+		
 		</ol>
 	</div>
-	
+	<% end %>
 <% end %>
+
+<% if @section_code == 18 %>
+    <div class="b-project b-project_news">
+	<ol class="b-output">
+	<% @results.each do |r| %>
+			<li class="b-output__item">
+				<a href="<%= r[:url].text %>"><%= r[:url_show].text %></a>
+			</li>
+		
+		</ol>
+	</div>
+	<% end %>
+<% end %>
+
+
+<% end %>
+
 <%= render :template => 'layouts/application' %>
 	
