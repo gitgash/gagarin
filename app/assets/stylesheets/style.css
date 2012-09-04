@@ -39,7 +39,13 @@
 	display:block;
 	width:131px;
 	height:65px;
-	background:url("/app/assets/images/rails.png") no-repeat 0 0;
+	background:url("http://3d.sputnik.ru/static/internet/img/1f397dfe564adf846df1ee14bfecb5dd.png") no-repeat 0 0;
+}
+.search-block{
+		height:40px;
+		background:#fff;
+		border:1px solid #7E7E7E;
+		z-index:8000;
 }
 
 .submit-block{
