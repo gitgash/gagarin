@@ -1,0 +1,5 @@
+<%= results.count %>
+
+<% results.each do |result| %>
+  <a href="<%= result[:url].text %>"><%= result[:title].text %></a>
+<% end %>

@@ -4,42 +4,25 @@
 
 <% content_for :content do %>
   <% if @section_code == "2223" %>
-    <div class="b-project b-project_news">
-    	<ol class="b-output">
-	      <% @results.each do |r| %>
-		
-    			<li class="b-output__item">
-    				<a href="<%= r[:url].text %>"><%= r[:title].text %></a>
-    			</li>
-    		<% end %>
-		  </ol>
-	  </div>
-	
-  
+    <%= render :partial => "page_news", :locals => { :results => @results } %>
+
   <% elsif @section_code == "31" %>
-    <div class="b-project b-project_news">
-      <ol class="b-output">
-        <% @results.each do |r| %>
-          <a href="<%= r[:url].text %>"><%= r[:title].text %></a>
-        <% end %>
-      </ol>
-    </div>
+    <%= render :partial => "page_internet", :locals => { :results => @results } %>
 
   <% elsif @section_code == "16" %>
-    <p>16</p>
+    <%= render :partial => "page_blogs", :locals => { :results => @results } %>
 
   <% elsif @section_code == "17" %>
-    <p>17</p>
+    <%= render :partial => "page_pictures", :locals => { :results => @results } %>
 
   <% elsif @section_code == "18" %>
-    <p>18</p>
+    <%= render :partial => "page_video", :locals => { :results => @results } %>
 
   <% else %>
-    <p><%= @section_code %> 12345678</p>
+    <%= render :partial => "page_other", :locals => { :results => @results } %>
 
   <% end %>
 <% end %>
-
 
 
 <%= render :template => 'layouts/application' %>
