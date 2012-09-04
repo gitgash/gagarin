@@ -35,8 +35,8 @@ function search(){
 	  data: "search="+str,
 	  success: function(msg){
 	  	document.getElementById("search_text").value="";
-	  	var data = eval(msg);
-		carusel.innerHTML="";
+	  	var data = eval('('+msg+')');
+	  	carusel.innerHTML="";
 	  	for(var i=0;i<data.length;i+=2){
 		    carusel.innerHTML+="<a href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
 	  	}
