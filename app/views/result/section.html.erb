@@ -6,10 +6,10 @@
   <% if @section_code == "2223" %>
     <div class="b-project b-project_news">
     	<ol class="b-output">
+        <% @i=0 %>
 	      <% @results.each do |r| %>
-		
     			<li class="b-output__item">
-    				<a href="<%= r[:url].text %>"><%= r[:title].text %></a><br>
+    				<label># <%= @i %></label><a href="<%= r[:url].text %>"><%= r[:title].text %></a><br>
     			</li>
     		<% end %>
 		  </ol>
