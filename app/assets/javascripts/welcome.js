@@ -24,6 +24,7 @@ function init_carusel(){
 		mouseWheel:true
 		}
 	);
+  document.bgColor="black";
 };
 var str1;
 
