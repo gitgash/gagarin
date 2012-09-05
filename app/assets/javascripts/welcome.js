@@ -68,10 +68,11 @@ function search(){
 };
 
 function unvisible(src,id){
-  var res = document.getElementById(""+id);
-  res.style.display = "block";
   document.getElementById("carousel1").style.visibility = "hidden";
   document.getElementById("theSearch").style.visibility = "hidden";
+  var res = document.getElementById(""+id);
+  res.style.display = "inline";
+ 
   
   
  /* var this_win = document.getElementById(id).style.top;
