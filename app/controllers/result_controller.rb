@@ -42,6 +42,7 @@ class ResultController < ApplicationController
       # req.basic_auth 'admin', 'SearchRF'
       req.basic_auth 'html5', 'KvorumSLA'
       response = http.request(req)
+      
       doc  = Nokogiri::XML(response.body.to_s)
       
       #get section
@@ -49,7 +50,22 @@ class ResultController < ApplicationController
       
       @results = Array.new
       sec.xpath("result").each do |r|
-        @results << {:url => r.xpath('url'), :title => r.xpath('title'), :url_show => r.xpath('url_show'), :title_show => r.xpath('title_show'), :snippet => r.xpath('snippet')}
+        @results << {
+          :url => r.xpath('url'), 
+          :title => r.xpath('title'), 
+          :url_show => r.xpath('url_show'), 
+          :title_show => r.xpath('title_show'), 
+          :snippet => r.xpath('snippet'),
+          :image_url =>
+            # не хорошо как-то, но пока так 
+            if r.xpath('user_data').empty?
+              nil
+            elsif r.xpath('user_data').xpath('image_data').empty?
+              nil
+            else           
+              r.xpath('user_data').xpath('image_data').attribute('url')
+            end,
+        }
       end
     end
     @section_code=params[:id]
