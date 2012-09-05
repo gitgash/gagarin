@@ -47,6 +47,8 @@ function search(){
 		      carusel.innerHTML+="<a target='_self' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
 	  	  }
 		  init_carusel();
+      carusel.style.display = "block";
+      carusel.style.visibility = "hidden";
 	   }
 	  });
     
@@ -58,7 +60,7 @@ function search(){
 };
 
 function invis(){
-  carusel.style.display = "block";
+ carusel.style.visibility = "visible";
 }
 
 
