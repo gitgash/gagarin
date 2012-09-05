@@ -68,7 +68,7 @@ function search(){
 function unvisible(src,id){
   $("#result").load('http://'+src);
   var res = document.getElementById("result");
-  res.style.display = "block";
+  res.style.visibility = "visible";
   document.getElementById("carousel1").style.visibility = "hidden";
   document.getElementById("theSearch").style.visibility = "hidden";
   
