@@ -47,17 +47,12 @@ a {
 
 
 .l-projects {
-	width: 940px;
-	margin: 18px auto 30px;
-	padding: 12px 12px 20px;
 	overflow: hidden;
 	position: relative;
 }
 
 .l-projects_shadow {
-	margin-top: 10px;
 	padding: 0;
-	border-radius: 9px;
 	background: #f1f1f1;
 	box-shadow: 0px 0px 13px rgba(0, 0, 0, .3);
 }
