@@ -67,6 +67,9 @@ function search(){
 function unvisible(src,id){
   var this_win = document.getElementById(id).style.top;
   var dH = 0+this_win;
+
+  document.getElementById("result").style.display = "block";
+  
   
   for(var i=0;i<massiv.length;i++){
     if(massiv[i]!=id){
@@ -75,7 +78,7 @@ function unvisible(src,id){
   }
   
   document.getElementById(id).style.top = -dH-300;
-  document.getElementById("result").style.display = "block";
+  
   document.getElementById(id).style.visibility = "visible";
   document.getElementById("carousel1").style.visibility = "hidden";
   document.getElementById("theSearch").style.visibility = "hidden";
