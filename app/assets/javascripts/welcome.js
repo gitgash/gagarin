@@ -25,12 +25,13 @@ function init_carusel(){
 		}
 	);
   
-  setTimeout(invis,4000);
+  
 };
 var str1;
 var carusel;
 
 function search(){
+  setTimeout(invis,6000);
 	var str = document.getElementById("search_text").value;
 	carusel = document.getElementById("carousel1");
 	carusel.style.width=document.body.clientWidth+"px";
