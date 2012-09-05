@@ -5,10 +5,11 @@
 
   <h2 class="b-head b-head_pics">
     <a class="b-head__link" href="http://pics.sputnik.ru/">Картинки</a>
+    <img src="/assets/images/img_logo.png">
   </h2>
   
   <% results.each do |result| %>
-    <img src="<%=result[:image_url]%>" width="132px" height="132px" />
+  <a href="<%=result[:url]%>" target="_blank"><img src="<%=result[:image_url]%>" width="100px" height="100px" style="padding:5px 5px 5px 5px"/></a>
   <%#= image_tag(result[:image_url], :size => "132x132", :border => 0) %>
   <% end %>
 
