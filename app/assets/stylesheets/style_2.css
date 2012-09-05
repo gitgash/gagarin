@@ -97,7 +97,7 @@ a {
 }
 
 #spinner {
-  z-index:10;
+  z-index:-10;
   position: fixed;
   top: 30%;
   left: 50%;
