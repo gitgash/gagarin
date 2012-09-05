@@ -53,7 +53,7 @@ function search(){
           id_page = Math.random()*5;
 		      //carusel.innerHTML+="<a target='_self' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
 	  	    carusel.innerHTML+="<img class = 'cloudcarousel' src='"+(data[i])+"' onClick='unvisible(\""+(data[i+1])+"\","+id_page+")'/>";
-           result.innerHTML+="<iframe id='"+id_page+"' src=\""+(data[i+1])+"\" width=\"630px\" style=\"visibility:hidden;\">Ваш браузер не поддерживает iframe</iframe>";
+           result.innerHTML+="<iframe id='"+id_page+"' src=\"http://"+(data[i+1])+"\" width=\"630px\" style=\"visibility:hidden;\">Ваш браузер не поддерживает iframe</iframe>";
         }
 		  init_carusel();
 	   }
@@ -64,6 +64,7 @@ function search(){
 function unvisible(src,id){
   document.getElementById(id).style.visibility = "visible";
   document.getElementById("carousel1").style.visibility = "hidden";
+  document.getElementById("light-opacity").style.visibility = "hidden";
 }
 
 
