@@ -31,9 +31,9 @@
 
 
 .b-head__link {
-  color: #333333;
-  font-size: 18px;
-  font-weight: bold;
+  color:silver;
+  text-decoration: none;
+  font-size: 24px;
 }
 a {
   color: #007CFF;
