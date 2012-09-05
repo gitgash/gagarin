@@ -24,11 +24,13 @@ function init_carusel(){
 		mouseWheel:true
 		}
 	);
-  document.bgColor="black";
 };
 var str1;
 var result;
+var res;
+
 var massiv = new Array();
+
 function search(){
 	var str = document.getElementById("search_text").value;
   var carusel = document.getElementById("carousel1");
@@ -70,7 +72,7 @@ function search(){
 function unvisible(src,id){
   document.getElementById("carousel1").style.visibility = "hidden";
   document.getElementById("theSearch").style.visibility = "hidden";
-  var res = document.getElementById(""+id);
+  res = document.getElementById(""+id);
   res.style.display = "block";
  
   
@@ -95,6 +97,13 @@ function unvisible(src,id){
   document.getElementById("carousel1").style.visibility = "hidden";
   document.getElementById("theSearch").style.visibility = "hidden";
   */
+}
+
+function back(){
+  res.style.display = "none";
+  document.getElementById("carousel1").style.visibility = "visible";
+  document.getElementById("theSearch").style.visibility = "visible";
+  
 }
 
 
