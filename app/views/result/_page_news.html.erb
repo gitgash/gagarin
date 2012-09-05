@@ -2,15 +2,14 @@
 <label style="color:silver;font-size:24px;">Новости</label><br><br>
 <div class="b-project b-project_news">
   <ol class="b-output">
-    <% @i=1 %>
     <% results.each do |r| %>
       <li class="b-output__item">
-        <label style="color:silver;size:16px;">#<%= @i %></label>&nbsp;&nbsp;<a class="b-output__head" href="<%= r[:url].text %>"><%= r[:title].text %></a><br>
+      <a class="b-output__head" href="<%= r[:url].text %>"><%= r[:title].text %></a><br>
       <div class="b-output__snippet">
-        <%= r[:snippet].text.html_safe %>
+      <%= r[:snippet].text.html_safe %>
       </div>
       </li>
-      <% @i=@i+1 %>
+      <br>
     <% end %>
   </ol>
 </div>
