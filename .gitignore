@@ -17,5 +17,5 @@
 /log/*.log
 /tmp
 
-# Ignore precompilled assets.
-/public/assets
+# Ignore precompilled assets. Or may be not... :)	
+# /public/assets

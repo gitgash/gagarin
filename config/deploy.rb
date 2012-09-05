@@ -35,7 +35,8 @@ after 'deploy:update_code', :roles => :app do
   run "ln -s #{deploy_to}/shared/production.sqlite3 #{current_release}/db/production.sqlite3"
 end
 
-after 'deploy:update_code', 'deploy:compile_assets'
+# Закомментировал, т.к. пришел к выводу, что ассеты лучше компилить локально :)
+# after 'deploy:update_code', 'deploy:compile_assets'
 
 # Это дополнение к deploy:setup копирует файлы config/*.exapmle с настройками БД и unicorn-а в shared/config
 after 'deploy:setup', :roles => :app do
