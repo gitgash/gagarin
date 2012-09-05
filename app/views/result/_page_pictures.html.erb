@@ -10,8 +10,7 @@
  </div>
   
   <% results.each do |result| %>
-  <a href="<%=result[:url]%>" target="_blank"><img src="<%=result[:image_url]%>" width="100px" height="100px" style="padding:5px 5px 5px 5px"/></a>
-  <%#= image_tag(result[:image_url], :size => "132x132", :border => 0) %>
+    <a href="<%=result[:url].text%>" target="_blank"><img src="<%=result[:image_url]%>" width="100px" height="100px" style="padding:5px 5px 5px 5px"/></a>
   <% end %>
 
 </div>
