@@ -29,6 +29,11 @@ $(document).ready(function(){
   var massiv = new Array();
 
   function search(){
+    for(var i=1;i<15;i+=2){
+      document.getElementById(""+i).innerHTML = '<div id = "'+i+'" style="z-index:2500;position:relative;top:10%;display:none;">';
+      document.getElementById(""+i).innerHTML+= '</div>';
+      
+    }
   	var str = document.getElementById("search_text").value;
     var carusel = document.getElementById("carousel1");
     var result  = document.getElementById("result");
