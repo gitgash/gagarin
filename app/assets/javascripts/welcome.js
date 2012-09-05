@@ -9,6 +9,10 @@ $(document).ready(function(){
 	
 });
 
+$(".main_p").ready(function(){
+  alert("Hello");
+});
+
 
 
 
