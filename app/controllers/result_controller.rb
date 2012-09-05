@@ -56,6 +56,7 @@ class ResultController < ApplicationController
           :url_show => r.xpath('url_show'), 
           :title_show => r.xpath('title_show'), 
           :snippet => r.xpath('snippet'),
+          :datetime => r.xpath('datetime'),
           :image_url =>
             # обязательно переделать эту хрень!!!
             if r.xpath('user_data').empty?

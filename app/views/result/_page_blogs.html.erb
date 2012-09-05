@@ -2,4 +2,7 @@
 
 <% results.each do |result| %>
   <a href="<%= result[:url].text %>"><%= result[:title].text %></a>
+  <br /><%= result[:snippet].text %>
+  <br /><%= result[:datetime].text %>
+  <br />
 <% end %>
