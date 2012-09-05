@@ -78,10 +78,11 @@ function unvisible(src,id){
     }
   }
   
-  document.getElementById(id).height = document.body.scrollHeight;
+  document.getElementById(id).style.visibility = "visible";
+  document.getElementById(id).height = document.getElementById(id).contentWindow.document.body.scrollHeight+4+'px';
   document.getElementById(id).style.top = -dH-document.body.clientHeight;
   
-  document.getElementById(id).style.visibility = "visible";
+  
   document.getElementById("carousel1").style.visibility = "hidden";
   document.getElementById("theSearch").style.visibility = "hidden";
 }
