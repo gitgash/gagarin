@@ -6,7 +6,7 @@
       <li class="b-output__item">
         <label style="color:silver;size:16px;">#<%= @i %></label>&nbsp;&nbsp;<a class="b-output__head" href="<%= r[:url].text %>"><%= r[:title].text %></a><br>
       <div class="b-output__snippet">
-        <%= r[:snippet].text %>
+        <%= r[:snippet].text.html_safe %>
       </div>
       </li>
       <% @i=@i+1 %>
