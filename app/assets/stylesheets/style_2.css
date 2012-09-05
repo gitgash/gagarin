@@ -26,3 +26,41 @@
 	font-weight: normal;
 	position: relative;
 }
+
+
+
+
+.b-head__link {
+  color: #333333;
+  font-size: 18px;
+  font-weight: bold;
+}
+a {
+  color: #007CFF;
+  text-decoration: underline;
+}
+
+.b-head {
+  background-image: url("/assets/head_icon.png");
+  background-repeat: no-repeat;
+  margin: 10px 0;
+  overflow: hidden;
+  padding: 0 0 0 26px;
+}
+
+.b-head_pics {
+  background-position: 0 -18px;
+}
+.b-head_video {
+  background-position: 0 -90px;
+}
+.b-head_news {
+  background-position: 0 -41px;
+}
+.b-head_blogs {
+  background-position: 0 -66px;
+  /*margin-left: 25px;*/
+}
+.b-head_internet {
+  background-position: 0 7px;
+}
