@@ -64,7 +64,7 @@ function search(){
 function unvisible(src,id){
   var top_v = document.body.clientHeight;
   var this_win = document.getElementById(id).style.top;
-  var dH = top_v - this_win;
+  var dH = 0+this_win;
   document.getElementById(id).style.top = -dH;
   document.getElementById("result").style.display = "block";
   document.getElementById(id).style.visibility = "visible";
