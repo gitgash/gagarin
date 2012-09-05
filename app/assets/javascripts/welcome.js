@@ -101,6 +101,9 @@ function unvisible(src,id){
 
 function back(){
   res.style.display = "none";
+  res.style.top = "50px";
+  res.style.boxShadow = "0px 0px 3px black";
+  res.style.boxRadius = "20px";
   document.getElementById("carousel1").style.visibility = "visible";
   document.getElementById("theSearch").style.visibility = "visible";
   
