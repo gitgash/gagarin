@@ -35,6 +35,8 @@ after 'deploy:update_code', :roles => :app do
   run "ln -s #{deploy_to}/shared/production.sqlite3 #{current_release}/db/production.sqlite3"
 end
 
+after 'deploy:update_code', 'deploy:compile_assets'
+
 # Это дополнение к deploy:setup копирует файлы config/*.exapmle с настройками БД и unicorn-а в shared/config
 after 'deploy:setup', :roles => :app do
   run "mkdir -p #{deploy_to}/shared/config"
@@ -56,5 +58,9 @@ namespace :deploy do
   end
   task :stop do
     run "if [ -f #{unicorn_pid} ] && [ -e /proc/$(cat #{unicorn_pid}) ]; then kill -QUIT `cat #{unicorn_pid}`; fi"
+  end
+  task :compile_assets do
+    # Компилим ассеты
+    run "cd #{current_release}; RAILS_ENV=production bundle exec rake assets:precompile"
   end
 end
