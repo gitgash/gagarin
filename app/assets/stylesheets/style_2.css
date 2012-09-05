@@ -56,6 +56,10 @@ a {
 .l-projects_shadow {
 	padding: 0;
 	background: #f1f1f1;
+	margin: 0; 
+	left:0;
+	width: 100%;
+	top:0;
 	box-shadow: 0px 0px 13px rgba(0, 0, 0, .3);
 }
 
