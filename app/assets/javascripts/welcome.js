@@ -31,7 +31,7 @@ var str1;
 var carusel;
 
 function search(){
-  setTimeout(invis,6000);
+  setTimeout(invis,10000);
 	var str = document.getElementById("search_text").value;
 	carusel = document.getElementById("carousel1");
 	carusel.style.width=document.body.clientWidth+"px";
