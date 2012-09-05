@@ -3,6 +3,7 @@ $(document).ready(function(){
 	//init_carusel();	
   $(document).keydown(function(event){
   if(event.keyCode==13){
+    document.getElementById("carousel1").style.height=document.body.clientHeight+"px";
     search();
   }
   });
@@ -46,7 +47,7 @@ function search(){
 		      carusel.innerHTML+="<a target='_self' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
 	  	  }
 		  init_carusel();
-      carusel.style.height=document.body.clientHeight+"px";
+      
 		  carusel.style.display = "block";
 	   }
 	  });
