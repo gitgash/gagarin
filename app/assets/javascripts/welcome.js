@@ -24,16 +24,12 @@ function init_carusel(){
 		mouseWheel:true
 		}
 	);
-  
-  
 };
 var str1;
-var carusel;
 
 function search(){
-  setTimeout(invis,10000);
 	var str = document.getElementById("search_text").value;
-	carusel = document.getElementById("carousel1");
+	var carusel = document.getElementById("carousel1");
 	carusel.style.width=document.body.clientWidth+"px";
   carusel.style.height=document.body.clientHeight+"px";
 	
@@ -50,24 +46,12 @@ function search(){
         for(var i=0;i<data.length;i+=2){
 		      carusel.innerHTML+="<a target='_self' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
 	  	  }
-      carusel.style.display = "block";
-      carusel.style.visibility = "hidden";
 		  init_carusel();
-     
-     
+		  carusel.style.display = "block";
 	   }
 	  });
-    
-    
-		
-      
-    
   }
 };
-
-function invis(){
- carusel.style.visibility = "visible";
-}
 
 
 
