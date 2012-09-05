@@ -6,7 +6,7 @@ body, html {
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
-	-o background-size: cover;
+	-o-background-size: cover;
 }
 .b-project {
 	float: left;
