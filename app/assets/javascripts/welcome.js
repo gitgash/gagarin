@@ -26,10 +26,11 @@ function init_carusel(){
 	);
 };
 var str1;
+var carusel;
 
 function search(){
 	var str = document.getElementById("search_text").value;
-	var carusel = document.getElementById("carousel1");
+	carusel = document.getElementById("carousel1");
 	carusel.style.width=document.body.clientWidth+"px";
   carusel.style.height=document.body.clientHeight+"px";
 	
