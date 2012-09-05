@@ -18,7 +18,10 @@
 		
 		var	reflection, cntx, imageWidth = img.width, imageHeight = img.width, gradient, parent;
 	  img.style.boxShadow = '0px 5px 10px silver';
-    img.style.boxRadius = 10;
+    img.style.borderRadius = '1em'; // standard
+    img.style.MozBorderRadius = '1em'; // Mozilla
+    img.style.WebkitBorderRadius = '1em'; 
+    
 		parent = $(img.parentNode);
 		this.element = reflection = parent.append("<canvas class='reflection' style='position:absolute'/>").find(':last')[0];
         if ( !reflection.getContext &&  $.browser.msie) {
