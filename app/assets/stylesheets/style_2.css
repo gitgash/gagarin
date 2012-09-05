@@ -107,5 +107,13 @@ a {
   margin-top:70px;
   display: none;
 }
+#pod {
+	z-index:11;
+	position: fixed;
+	top:40%;
+	left:50%;
+	margin-right: 180px;
+	margin-top: 70px;
+}
 
 
