@@ -52,11 +52,12 @@ function search(){
         carusel.innerHTML="";
         for(var i=0;i<data.length;i+=2){
           id_page = Math.random()*5;
-          massiv[j]=id_page;
+          //massiv[j]=id_page;
 		      //carusel.innerHTML+="<a target='_self' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
 	  	    carusel.innerHTML+="<img class = 'cloudcarousel' src='"+(data[i])+"' onClick='unvisible(\""+(data[i+1])+"\","+id_page+")'/>";
-          result.innerHTML+="<iframe id='"+id_page+"' src=\"http://"+(data[i+1])+"\" width=\"630px\" height='300px' class='l-projects_shadow' style=\"visibility:hidden;z-index:10000;\">Ваш браузер не поддерживает iframe</iframe>";
-          j++;
+          //result.innerHTML+="<frameset id='"+id_page+"' rows='100%' cols='*' style='visibility:hidden;'><frame src=\"http://"+(data[i+1])+"\" scrolling='no' noresize></frameset>";
+          //result.innerHTML+="<iframe id='"+id_page+"' src=\"http://"+(data[i+1])+"\" width=\"630px\" class='l-projects_shadow' style=\"visibility:hidden;z-index:10000;\">Ваш браузер не поддерживает iframe</iframe>";
+          //j++;
         }
 		  init_carusel();
 	   }
@@ -65,7 +66,14 @@ function search(){
 };
 
 function unvisible(src,id){
-  var this_win = document.getElementById(id).style.top;
+  $("#result").load('http://'+src);
+  document.getElementById("carousel1").style.visibility = "hidden";
+  document.getElementById("theSearch").style.visibility = "hidden";
+  var res = document.getElementById("result");
+  res.style.visibility = "visible";
+ 
+  
+ /* var this_win = document.getElementById(id).style.top;
   var dH = 0+this_win;
 
   document.getElementById("result").style.display = "block";
@@ -77,11 +85,14 @@ function unvisible(src,id){
     }
   }
   
-  document.getElementById(id).style.top = -dH-300;
-  
   document.getElementById(id).style.visibility = "visible";
+  document.getElementById(id).height = document.getElementById(id).contentWindow.document.body.scrollHeight+'px';
+  document.getElementById(id).style.top = -dH-document.body.clientHeight;
+  
+  
   document.getElementById("carousel1").style.visibility = "hidden";
   document.getElementById("theSearch").style.visibility = "hidden";
+  */
 }
 
 
