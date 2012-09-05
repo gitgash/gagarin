@@ -34,7 +34,6 @@ function search(){
 	carusel.style.width=document.body.clientWidth+"px";
   carusel.style.height=document.body.clientHeight+"px";
 	
-	//alert(carusel.style.width);
 	if(str1!=str){
     carusel.style.display = "none";
     $('#spinner').show();
@@ -43,19 +42,22 @@ function search(){
       url: "result.json",
       data: "search="+str,
       success: function(msg){
-        //carusel.style.display = "none";
         str1 = str;
         var data = eval(msg);
         carusel.innerHTML="";
         for(var i=0;i<data.length;i+=2){
-		      carusel.innerHTML+="<a target='_self' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
-	  	  }
+		      //carusel.innerHTML+="<a target='_self' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
+	  	    carusel.innerHTML+="<img class = 'cloudcarousel' src='"+(data[i])+"' onClick='unvisible(\""+(data[i+1])+"\")'/>";
+        }
 		  init_carusel();
-		  //carusel.style.display = "block";
 	   }
 	  });
   }
 };
+
+function unvisible(src){
+  alert(src);  
+}
 
 
 
