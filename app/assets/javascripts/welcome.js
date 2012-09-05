@@ -24,6 +24,8 @@ function init_carusel(){
 		mouseWheel:true
 		}
 	);
+  
+  setTimeout(invis,4000);
 };
 var str1;
 var carusel;
@@ -55,7 +57,7 @@ function search(){
 	   }
 	  });
     
-    setTimeout(invis,3000);
+    
 		
       
     
