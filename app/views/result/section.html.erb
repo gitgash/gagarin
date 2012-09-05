@@ -1,7 +1,3 @@
-<% content_for :javascript do %>
-<% end %>
-
-
 <% content_for :content do %>
   <% if @section_code == "2223" %>
     <%= render :partial => "page_news", :locals => { :results => @results } %>
@@ -23,6 +19,3 @@
 
   <% end %>
 <% end %>
-
-
-<%= render :template => 'layouts/application' %>
