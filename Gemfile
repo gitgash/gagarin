@@ -23,6 +23,19 @@ end
 
 gem 'jquery-rails'
 
+group :production do
+  # Use unicorn as the web server
+  gem 'unicorn'
+end
+
+group :development do
+  # Deploy with Capistrano
+  gem 'capistrano'
+  # Use thin as the web server for development
+  gem 'thin'
+end
+
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
