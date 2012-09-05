@@ -53,7 +53,7 @@ function search(){
           id_page = Math.random()*5;
 		      //carusel.innerHTML+="<a target='_self' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
 	  	    carusel.innerHTML+="<img class = 'cloudcarousel' src='"+(data[i])+"' onClick='unvisible(\""+(data[i+1])+"\","+id_page+")'/>";
-          result.innerHTML+="<iframe id='"+id_page+"' src=\"http://"+(data[i+1])+"\" width=\"630px\" height='500px' class='l-projects_shadow' style=\"visibility:hidden;z-index:10000;\">Ваш браузер не поддерживает iframe</iframe>";
+          result.innerHTML+="<iframe id='"+id_page+"' src=\"http://"+(data[i+1])+"\" width=\"630px\" height='350px' class='l-projects_shadow' style=\"visibility:hidden;z-index:10000;\">Ваш браузер не поддерживает iframe</iframe>";
         }
 		  init_carusel();
 	   }
@@ -62,6 +62,10 @@ function search(){
 };
 
 function unvisible(src,id){
+  var top_v = document.body.clientHeight;
+  var this_win = document.getElementById(id).style.top;
+  var dH = top_v - this_win;
+  document.getElementById(id).style.top = -dH;
   document.getElementById("result").style.display = "block";
   document.getElementById(id).style.visibility = "visible";
   document.getElementById("carousel1").style.visibility = "hidden";
