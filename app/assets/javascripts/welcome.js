@@ -71,7 +71,7 @@ function unvisible(src,id){
   document.getElementById("carousel1").style.visibility = "hidden";
   document.getElementById("theSearch").style.visibility = "hidden";
   var res = document.getElementById(""+id);
-  res.style.display = "inline";
+  res.style.display = "block";
  
   
   
