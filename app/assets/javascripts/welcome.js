@@ -53,13 +53,13 @@ function search(){
         for(var i=0;i<data.length;i+=2){
           id_page = Math.random()*5;
           
-          //massiv[j]=id_page;
+          massiv[j]=i+1;
 		      //carusel.innerHTML+="<a target='_self' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
 	  	    carusel.innerHTML+="<img class = 'cloudcarousel' src='"+(data[i])+"' onClick='unvisible(\""+(data[i+1])+"\","+(i+1)+")'/>";
           $("#"+(i+1)).load('http://'+data[i+1]);
           //result.innerHTML+="<frameset id='"+id_page+"' rows='100%' cols='*' style='visibility:hidden;'><frame src=\"http://"+(data[i+1])+"\" scrolling='no' noresize></frameset>";
           //result.innerHTML+="<iframe id='"+id_page+"' src=\"http://"+(data[i+1])+"\" width=\"630px\" class='l-projects_shadow' style=\"visibility:hidden;z-index:10000;\">Ваш браузер не поддерживает iframe</iframe>";
-          //j++;
+          j++;
         }
 		  init_carusel();
 	   }
@@ -69,10 +69,13 @@ function search(){
 
 function unvisible(src,id){
   var res = document.getElementById(""+id);
+  res.style.display = "block";
   res.style.visibility = "visible";
   document.getElementById("carousel1").style.visibility = "hidden";
   document.getElementById("theSearch").style.visibility = "hidden";
- 
+  for(var i=0;i<massiv.length;i++){
+    document.getElementById(""+massiv[i]).style.display = "none";
+  }
  
   
  
