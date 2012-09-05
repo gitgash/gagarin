@@ -99,11 +99,10 @@ a {
 #spinner {
   z-index:10;
   position: fixed;
-  top: 40%;
+  top: 30%;
   left: 50%;
-  margin-left: -200px;
-  width:400px;
-  height:300px;
+  margin-left: -283px;
+  width:567px;
   margin-top:70px;
   display: none;
 }
