@@ -31,7 +31,7 @@ function search(){
 	var str = document.getElementById("search_text").value;
 	var carusel = document.getElementById("carousel1");
 	carusel.style.width=document.body.clientWidth+"px";
-	carusel.style.height=document.body.clientHeight+"px";
+	
 	//alert(carusel.style.width);
 	if(str1!=str){
     $.ajax({
@@ -46,6 +46,7 @@ function search(){
 		      carusel.innerHTML+="<a target='_self' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
 	  	  }
 		  init_carusel();
+      carusel.style.height=document.body.clientHeight+"px";
 		  carusel.style.display = "block";
 	   }
 	  });
