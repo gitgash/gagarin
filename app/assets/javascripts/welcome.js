@@ -55,8 +55,8 @@ function search(){
           massiv[j]=id_page;
 		      //carusel.innerHTML+="<a target='_self' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
 	  	    carusel.innerHTML+="<img class = 'cloudcarousel' src='"+(data[i])+"' onClick='unvisible(\""+(data[i+1])+"\","+id_page+")'/>";
-          result.innerHTML+="<frameset id='"+id_page+"' rows='100%' cols='*' style='visibility:hidden;'><frame src=\"http://"+(data[i+1])+"\" scrolling='no' noresize></frameset>";
-          //<iframe id='"+id_page+"' src=\"http://"+(data[i+1])+"\" width=\"630px\" height='300px' class='l-projects_shadow' style=\"visibility:hidden;z-index:10000;\">Ваш браузер не поддерживает iframe</iframe>";
+          //result.innerHTML+="<frameset id='"+id_page+"' rows='100%' cols='*' style='visibility:hidden;'><frame src=\"http://"+(data[i+1])+"\" scrolling='no' noresize></frameset>";
+          result.innerHTML+="<iframe id='"+id_page+"' src=\"http://"+(data[i+1])+"\" width=\"630px\" height='300px' class='l-projects_shadow' style=\"visibility:hidden;z-index:10000;\">Ваш браузер не поддерживает iframe</iframe>";
           j++;
         }
 		  init_carusel();
