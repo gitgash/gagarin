@@ -57,11 +57,15 @@ class ResultController < ApplicationController
           :title_show => r.xpath('title_show'), 
           :snippet => r.xpath('snippet'),
           :image_url =>
-            # не хорошо как-то, но пока так 
+            # обязательно переделать эту хрень!!!
             if r.xpath('user_data').empty?
               nil
             elsif r.xpath('user_data').xpath('image_data').empty?
-              nil
+              if r.xpath('user_data').xpath('video_data').empty?
+                nil
+              else
+                r.xpath('user_data').xpath('video_data').attribute('thumbnail')
+              end
             else           
               r.xpath('user_data').xpath('image_data').attribute('url')
             end,

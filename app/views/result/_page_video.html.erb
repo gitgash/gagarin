@@ -1,5 +1,6 @@
-<%= results.count %>
+<!-- Обернуть всё в класс а потом дивами распределить картинки и сделать ссылками на result[:url] -->
+<h3>Видео</h3>
 
 <% results.each do |result| %>
-  <a href="<%= result[:url].text %>"><%= result[:title].text %></a>
+  <img src="<%=result[:image_url]%>" width="132px" height="132px" />
 <% end %>
