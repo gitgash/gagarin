@@ -77,7 +77,7 @@ function unvisible(src,id){
     }
   }
   
-  document.getElementById(id).style.top = -dH-300;
+  document.getElementById(id).style.top = -dH-document.body.clientHeight;
   
   document.getElementById(id).style.visibility = "visible";
   document.getElementById("carousel1").style.visibility = "hidden";
