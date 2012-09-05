@@ -93,3 +93,17 @@ a {
     text-align: center;
     width: 33%;
 }
+
+#spinner {
+  z-index:10;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-left: -50px;
+  width:100px;
+  height:100px;
+  margin-top:70px;
+  display: none;
+}
+
+

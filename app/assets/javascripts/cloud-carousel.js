@@ -333,7 +333,8 @@
 			this.showFrontText();
 			this.autoRotate();	
 			this.updateAll();
-			
+			document.getElementById("carousel1").style.display = "block"; // SALKOV
+	    $('#spinner').hide(); // SALKOV
 		};
 
 		this.tt = setInterval( function(){ctx.checkImagesLoaded();},50);	

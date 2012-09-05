@@ -35,11 +35,14 @@ function search(){
 	
 	//alert(carusel.style.width);
 	if(str1!=str){
+    carusel.style.display = "none";
+    $('#spinner').show();
     $.ajax({
       type: "POST",
       url: "result.json",
       data: "search="+str,
       success: function(msg){
+        //carusel.style.display = "none";
         str1 = str;
         var data = eval(msg);
         carusel.innerHTML="";
@@ -48,7 +51,7 @@ function search(){
 	  	  }
 		  init_carusel();
       
-		  carusel.style.display = "block";
+		  // carusel.style.display = "block";
 	   }
 	  });
   }
