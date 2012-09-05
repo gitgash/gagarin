@@ -70,15 +70,9 @@ function search(){
 function unvisible(src,id){
   var res = document.getElementById(""+id);
   res.style.display = "block";
-  res.style.visibility = "visible";
   document.getElementById("carousel1").style.visibility = "hidden";
   document.getElementById("theSearch").style.visibility = "hidden";
-  for(var i=0;i<massiv.length;i++){
-    document.getElementById(""+massiv[i]).style.display = "none";
-  }
- 
   
- 
   
  /* var this_win = document.getElementById(id).style.top;
   var dH = 0+this_win;
