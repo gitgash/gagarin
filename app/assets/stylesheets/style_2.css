@@ -41,6 +41,7 @@ a {
 }
 
 .b-head {
+ 
   margin: 10px 0;
   overflow: hidden;
   padding: 0 0 0 26px;
@@ -50,8 +51,6 @@ a {
   background-position: 0 -18px;
 }
 .b-head_video {
-  background-image: url("/assets/video_logo.png");
-  background-repeat: no-repeat;
   background-position: 0 -90px;
 }
 .b-head_news {
