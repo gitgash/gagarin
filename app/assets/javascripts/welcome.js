@@ -66,11 +66,13 @@ function search(){
 };
 
 function unvisible(src,id){
+  var res = document.getElementById("result");
+  res.style.visibility = "visible";
   $("#result").load('http://'+src);
   document.getElementById("carousel1").style.visibility = "hidden";
   document.getElementById("theSearch").style.visibility = "hidden";
-  var res = document.getElementById("result");
-  res.style.visibility = "visible";
+ 
+  
  
   
  /* var this_win = document.getElementById(id).style.top;
