@@ -38,12 +38,13 @@ end
 # Закомментировал, т.к. пришел к выводу, что ассеты лучше компилить локально :)
 # after 'deploy:update_code', 'deploy:compile_assets'
 
-# Это дополнение к deploy:setup копирует файлы config/*.exapmle с настройками БД и unicorn-а в shared/config
+# Это дополнение к deploy:setup копирует файлы config/*.exapmle с настройками приложения, БД и unicorn-а в shared/config
 after 'deploy:setup', :roles => :app do
   run "mkdir -p #{deploy_to}/shared/config"
   run "rm -fr /tmp/#{application}"
   run "git clone #{repository} /tmp/#{application}"
   run "cp /tmp/#{application}/config/database.yml.example #{deploy_to}/shared/config/database.yml"
+  run "cp /tmp/#{application}/config/gagarin.yml.example #{deploy_to}/shared/config/gagarin.yml"
   run "cp /tmp/#{application}/config/unicorn.rb.example #{unicorn_conf}"
   run "rm -fr /tmp/#{application}"
 end

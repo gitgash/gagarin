@@ -1,0 +1,8 @@
+development:
+  renderer:
+    port: 3003
+
+production:
+  renderer:
+    port: 80
+    

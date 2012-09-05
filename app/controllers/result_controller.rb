@@ -85,7 +85,7 @@ class ResultController < ApplicationController
         s = uri.path
         s['.jpg'] = '.html'
         uri.path = s
-        uri.port = 3003
+        uri.port = RENDERER_PORT
         contents = IMGKit.new(uri.to_s)
         send_data contents.to_img(:jpg), :filename => "#{params[:id]}.jpg", 
                                         :disposition => 'inline', 
