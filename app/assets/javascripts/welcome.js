@@ -17,7 +17,7 @@ function init_carusel(){
 		reflHeight: 56,
 		reflGap:1,
 		xPos: document.body.clientWidth/2,
-		yPos: document.body.clientHeight/2-200,
+		yPos: document.body.clientHeight/2-170,
 		yRadius:240,
 		speed:0.15,
 		reflOpacity:0.3,
