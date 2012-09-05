@@ -1,11 +1,13 @@
 <!-- Обернуть всё в класс а потом дивами распределить картинки и сделать ссылками на result[:url] -->
 <div class="l-projects l-projects_shadow">
-<h2 class="b-head b-head_video">
-  <img src="/assets/video_logo.png"/<a class="b-head__link" href="http://video.sputnik.ru/">Видео</a>
-</h2>
+  <h2 class="b-head b-head_video">
+    <img src="/assets/video_logo.png"/<a class="b-head__link" href="http://video.sputnik.ru/">Видео</a>
+  </h2>
 
 
-<% results.each do |result| %>
-<a href="<%=result[:url].text %>" target="_self"><img src="<%=result[:image_url]%>" width="100px" height="100px" style="padding:5px 5px 5px 5px"/></a>
-<% end %>
+  <% results.each do |result| %>
+    <div class="pic">
+      <a href="<%=result[:url].text %>" target="_self"><img src="<%=result[:image_url]%>" width="100px" height="100px" style="padding:5px 5px 5px 5px"/></a>
+    </div>
+  <% end %>
 </div>
