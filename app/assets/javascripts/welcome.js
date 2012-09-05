@@ -3,7 +3,6 @@ $(document).ready(function(){
 	//init_carusel();	
   $(document).keydown(function(event){
   if(event.keyCode==13){
-    document.getElementById("carousel1").style.height=document.body.clientHeight+"px";
     search();
   }
   });
@@ -32,6 +31,7 @@ function search(){
 	var str = document.getElementById("search_text").value;
 	var carusel = document.getElementById("carousel1");
 	carusel.style.width=document.body.clientWidth+"px";
+  carusel.style.height=document.body.clientHeight+"px";
 	
 	//alert(carusel.style.width);
 	if(str1!=str){
