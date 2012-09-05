@@ -75,3 +75,10 @@ a {
 .b-head_internet {
   background-position: 0 7px;
 }
+
+.pic {
+    float: left;
+    margin: 20px 0;
+    text-align: center;
+    width: 33%;
+}
