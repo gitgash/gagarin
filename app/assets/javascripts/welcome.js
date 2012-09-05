@@ -45,7 +45,7 @@ function search(){
         var data = eval(msg);
         carusel.innerHTML="";
         for(var i=0;i<data.length;i+=2){
-		      carusel.innerHTML+="<a target='_blank' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
+		      carusel.innerHTML+="<a target='_self' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
 	  	  }
 		  init_carusel();
 		  carusel.style.display = "block";
