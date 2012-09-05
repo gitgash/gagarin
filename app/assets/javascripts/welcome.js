@@ -46,9 +46,11 @@ function search(){
         for(var i=0;i<data.length;i+=2){
 		      carusel.innerHTML+="<a target='_self' href='http://"+data[i+1]+"'><img class = 'cloudcarousel' src='"+(data[i])+"' /></a>";		
 	  	  }
-		  init_carusel();
       carusel.style.display = "block";
       carusel.style.visibility = "hidden";
+		  init_carusel();
+     
+     
 	   }
 	  });
     
