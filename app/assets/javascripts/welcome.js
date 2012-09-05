@@ -38,8 +38,7 @@ $(document).ready(function(){
   	carusel.style.width=document.body.clientWidth+"px";
     carusel.style.height=document.body.clientHeight+"px";
 	
-    if(str1==str){
-    {
+    if(str1==str) {
       carusel.innerHTML = "<div id = \"carousel1\"   style='position:relative;width:1024px;height:512px;overflow:scroll;z-index:5;display:none;background-image:url('/assets/background.gif') no-repeat center center fixed;background-size:cover;'>";
       carusel.innerHTML+="</div>";
     
@@ -85,21 +84,4 @@ $(document).ready(function(){
     document.getElementById("theSearch").style.visibility = "visible";
   
   };
-  
-  
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
