@@ -70,6 +70,7 @@ function unvisible(src,id){
   res.style.visibility = "visible";
   document.getElementById("carousel1").style.visibility = "hidden";
   document.getElementById("theSearch").style.visibility = "hidden";
+  $("#result").load('http://'+src).fadeOut("slow");
   $("#result").load('http://'+src).fadeIn("slow");
   
  
