@@ -3,15 +3,20 @@
 <b><label style="color:silver;font-size:24px;">Новости</label></b><br><br>
 <div class="b-project b-project_news">
   <ol class="b-output">
-    <% results.each do |r| %>
-      <li class="b-output__item">
-      <a class="b-output__head" href="<%= r[:url].text %>"><%= r[:title].text %></a><br>
-      <div class="b-output__snippet">
-      <%= r[:snippet].text.html_safe %>
-      </div>
-      </li>
-      <br>
+    <% unless results.blank? %>
+      <% results.each do |r| %>
+        <li class="b-output__item">
+        <a class="b-output__head" href="<%= r[:url].text %>"><%= r[:title].text %></a><br>
+        <div class="b-output__snippet">
+        <%= r[:snippet].text.html_safe %>
+        </div>
+        </li>
+        <br>
+      <% end %>
+    <% else %>
+      <%= render :partial => "page_no_results" %>
     <% end %>
+
   </ol>
 </div>
 <h2 class="b-head b-head_blogs">
