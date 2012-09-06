@@ -2,7 +2,7 @@ body, html {
 	font: 12px/1.4 arial, sans-serif;
 	margin: 0;
 	padding: 0;
-	background:url('/assets/background.gif') no-repeat center center fixed;
+	background:url('/assets/background.jpg') no-repeat center center fixed;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -58,9 +58,9 @@ a {
 
 
 .l-projects {
-	width:630px;
-  height:630px;
-	margin: 5px 5px 5px 5px;
+	width:600px;
+  height:600px;
+	margin: 5px 5px 0 5px;
 	overflow: hidden;
 	position: relative;
 }
@@ -105,7 +105,7 @@ a {
 #spinner {
   z-index:4;
   position: fixed;
-  top: 40%;
+  top: 13%;
   left: 50%;
   margin-left: -50px;
   width:100px;
@@ -120,3 +120,11 @@ a {
 h2 {
   clear: both;
 }
+
+body.results {
+  background-color: #0067ce;
+  background-image: none;
+  
+}
+
+

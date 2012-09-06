@@ -8,8 +8,8 @@ $(document).ready(function(){
   		reflHeight: 76,
   		reflGap:1,
   		xPos: document.body.clientWidth/2,
-  		yPos: document.body.clientHeight/2-230,
-  		yRadius:240,
+  		yPos: document.body.clientHeight/2-330,
+  		yRadius:100,
   		speed:0.15,
   		reflOpacity:0.5,
   		mouseWheel:true
@@ -39,7 +39,7 @@ $(document).ready(function(){
     carusel.style.height=(document.body.clientHeight - 10)+"px";
 	
     if(str1==str) {
-      carusel.innerHTML = "<div id = \"carousel1\"   style='position:relative;width:1024px;height:512px;overflow:scroll;z-index:5;display:none;background-image:url('/assets/background.gif') no-repeat center center fixed;background-size:cover;'>";
+      carusel.innerHTML = "<div id = \"carousel1\"   style='position:relative;width:1024px;height:512px;overflow:scroll;z-index:5;display:none;background-image:url('/assets/background.jpg') no-repeat center center fixed;background-size:cover;'>";
       carusel.innerHTML+="</div>";
     
     };
