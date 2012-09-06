@@ -1,15 +1,13 @@
 <% unless params[:fordiv] %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 4.0 Transitional//EN" "http://wwww.w3.org/TR/xhtml1-transitional.dtd">
-<html xmlns="http://wwww.w3.org/1999/xhtml">
+<html xmlns="http://wwww.w3.org/1999/xhtml" class="results">
 <head>
   <title>Спутник</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
 </head>
-<body class="results">
+<body>
 <% end %>
-
 <%= yield(:content) %>
-
 <% unless params[:fordiv] %>
 </body>
 </html>

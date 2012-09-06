@@ -1,21 +1,26 @@
 <% content_for :content do %>
+<div class="l-projects l-projects_shadow">
   <% if @section_code == "2223" %>
     <%= render :partial => "page_news", :locals => { :results => @results } %>
-
   <% elsif @section_code == "31" %>
     <%= render :partial => "page_internet", :locals => { :results => @results } %>
-
   <% elsif @section_code == "16" %>
     <%= render :partial => "page_blogs", :locals => { :results => @results } %>
-
   <% elsif @section_code == "17" %>
     <%= render :partial => "page_pictures", :locals => { :results => @results } %>
-
   <% elsif @section_code == "18" %>
     <%= render :partial => "page_video", :locals => { :results => @results } %>
-
   <% else %>
     <%= render :partial => "page_other", :locals => { :results => @results } %>
-
   <% end %>
+
+  <% if params[:fordiv] %>
+    <div class="submit-block backButtonWrapper">
+      <div class="ui-btn ui-shadow ui-btn-corner-all ui-fullsize ui-btn-block ui-btn-up-c" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="" data-iconpos="" data-theme="c" data-inline="false" data-mini="false" aria-disabled="false">
+        <span class="ui-btn-inner ui-btn-corner-all">
+        <input class="submit-button ui-btn-hidden backButton" type="button" value="Назад" aria-disabled="false">
+      </div>
+    </div>
+  <% end %>
+</div>
 <% end %>

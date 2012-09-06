@@ -7,10 +7,9 @@ class ResultController < ApplicationController
   def index
     
     
-    ret = Array.new
     #call server
     http_session = Net::HTTP.new('3d.sputnik.ru', 80)
-    http_session.start do |http| 
+    ret = http_session.start do |http| 
       req = Net::HTTP::Get.new("/search?q=#{URI.encode params[:search]}&xmlout=1")
       # req.basic_auth 'admin', 'SearchRF'
       req.basic_auth 'html5', 'KvorumSLA'
@@ -22,12 +21,22 @@ class ResultController < ApplicationController
       u = uri.to_s
       u['/result.json'] = ''
       u['http://'] = ''
-      p "DEBUG+++++++++++++++++++++++++++++++++++++++++++++++++++++"+u
+      p "DEBUG+++++++++++++++++++++++++++++++++++++++++++++++++++++" + u
+      
+      h = {}
       doc.xpath('//query').each do |q|
-        ret << "#{result_section_path(:id => q['collection'])}.jpg?search=#{URI.encode params[:search]}"
-        ret <<  u + "#{result_section_path(:id => q['collection'])}.html?search=#{URI.encode params[:search]}"
+        h[q['collection'].to_i] = [
+          "#{result_section_path(:id => q['collection'])}.jpg?search=#{URI.encode params[:search]}",
+          u + "#{result_section_path(:id => q['collection'])}.html?search=#{URI.encode params[:search]}"
+        ]
       end
 
+      # 16 - блоги
+      # 17 - картинки         2 3
+      # 18 - видео          1    4
+      # 31 - Интернет         0
+      # 2223 - новости
+      [31, 2223, 16, 18, 17].inject([]) { |a, s| a + h[s] }
     end
     
     respond_to do |format|

@@ -1,19 +1,6 @@
-<div class="l-projects l-projects_shadow">
-<h2 class="b-head b-head_internet">
-  <a class="b-head__link" href="http://0.sputnik.ru/">Интернет</a>
-</h2>
+<h2><a href="http://0.sputnik.ru/">Интернет</a></h2>
 <% unless results.blank? %>
-  <% results.each do |result| %>
-    <a href="<%= result[:url].text %>"><%= result[:title].text.html_safe %></a>
-    <br /><%= result[:snippet].text.html_safe %>
-    <br /><%= result[:datetime].text.html_safe %>
-    <br />
-    <br>
-  <% end %>
+  <%= render :partial => 'result', :collection => results %>
 <% else %>
   <%= render :partial => "page_no_results" %>
 <% end %>
-<h2 class="b-head b-head_blogs">
-  <input type="button" value="Назад" class="backButton">
-</h2>
-</div>
