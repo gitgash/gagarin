@@ -9,9 +9,8 @@ class ResultController < ApplicationController
   caches_action :index, :section, :cache_path => Proc.new { |controller| controller.params }
   
   def index
+    ret = nil
     
-    
-    ret = Array.new
     #call server
     http_session = Net::HTTP.new('3d.sputnik.ru', 80)
     http_session.start do |http| 
@@ -28,19 +27,28 @@ class ResultController < ApplicationController
       u['http://'] = ''
 
       unless doc.xpath('//query').blank?
+        h = {}
         doc.xpath('//query').each do |q|
-          ret << "#{result_section_path(:id => q['collection'])}.jpg?search=#{URI.encode params[:search]}"
-          ret <<  u + "#{result_section_path(:id => q['collection'])}.html?search=#{URI.encode params[:search]}"
+          h[q['collection'].to_i] = [
+            "#{result_section_path(:id => q['collection'])}.jpg?search=#{URI.encode params[:search]}",
+            u + "#{result_section_path(:id => q['collection'])}.html?search=#{URI.encode params[:search]}"
+          ]
         end
-        puts "------- #{ret}"
+
+        # 16 - блоги
+        # 17 - картинки         2 3
+        # 18 - видео          1    4
+        # 31 - Интернет         0
+        # 2223 - новости
+        ret = [31, 2223, 16, 18, 17].inject([]) { |a, s| a + h[s] }
       else
         # самая простая костыльная реализация
         ret = [
-          "/result/section/18.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/18.html?search=xuyandzhopenotfound",
-          "/result/section/16.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/16.html?search=xuyandzhopenotfound",
-          "/result/section/2223.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/2223.html?search=xuyandzhopenotfound",
-          "/result/section/17.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/17.html?search=xuyandzhopenotfound",
-          "/result/section/31.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/31.html?search=xuyandzhopenotfound"
+          "/result/section/31.jpg?search=xuyandzhopenotfound", "#{u}/result/section/31.html?search=xuyandzhopenotfound",
+          "/result/section/2223.jpg?search=xuyandzhopenotfound", "#{u}/result/section/2223.html?search=xuyandzhopenotfound",
+          "/result/section/16.jpg?search=xuyandzhopenotfound", "#{u}/result/section/16.html?search=xuyandzhopenotfound",
+          "/result/section/18.jpg?search=xuyandzhopenotfound", "#{u}/result/section/18.html?search=xuyandzhopenotfound",
+          "/result/section/17.jpg?search=xuyandzhopenotfound", "#{u}/result/section/17.html?search=xuyandzhopenotfound",
         ]
       end
       
