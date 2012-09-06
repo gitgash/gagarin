@@ -1,3 +1,5 @@
+require 'active_support/all'
+
 Ggr::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -34,4 +36,8 @@ Ggr::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  config.cache_store = :dalli_store, 'localhost',
+      { :expires_in => 1.day, :compress => false }
+  
 end
