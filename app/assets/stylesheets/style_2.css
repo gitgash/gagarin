@@ -105,7 +105,7 @@ a {
 #spinner {
   z-index:4;
   position: fixed;
-  top: 13%;
+  top: 30%;
   left: 50%;
   margin-left: -50px;
   width:100px;

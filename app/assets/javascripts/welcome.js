@@ -8,8 +8,8 @@ $(document).ready(function(){
   		reflHeight: 76,
   		reflGap:1,
   		xPos: document.body.clientWidth/2,
-  		yPos: document.body.clientHeight/2-330,
-  		yRadius:100,
+  		yPos: document.body.clientHeight/2-230,
+  		yRadius:140,
   		speed:0.15,
   		reflOpacity:0.5,
   		mouseWheel:true
