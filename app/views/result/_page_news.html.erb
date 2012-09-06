@@ -6,7 +6,7 @@
     <% unless results.blank? %>
       <% results.each do |r| %>
         <li class="b-output__item">
-        <a class="b-output__head" href="<%= r[:url].text %>"><%= r[:title].text %></a><br>
+        <a class="b-output__head" href="<%= r[:url].text %>"><%= r[:title].text.html_safe %></a><br>
         <div class="b-output__snippet">
         <%= r[:snippet].text.html_safe %>
         </div>
