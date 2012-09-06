@@ -83,7 +83,7 @@ $(document).ready(function(){
   };
 
   function back() {
-    res.hide();//fadeOut();
+    res.fadeOut();
     img.appendTo('#carousel1').animate(img_css);
     $("#carousel1").fadeIn();
     $("#theSearch").fadeIn();
