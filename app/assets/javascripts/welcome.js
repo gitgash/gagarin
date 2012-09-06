@@ -36,7 +36,7 @@ $(document).ready(function(){
     var j=0;
   
   	carusel.style.width=document.body.clientWidth+"px";
-    carusel.style.height=document.body.clientHeight+"px";
+    carusel.style.height=(document.body.clientHeight - 10)+"px";
 	
     if(str1==str) {
       carusel.innerHTML = "<div id = \"carousel1\"   style='position:relative;width:1024px;height:512px;overflow:scroll;z-index:5;display:none;background-image:url('/assets/background.gif') no-repeat center center fixed;background-size:cover;'>";
@@ -81,8 +81,8 @@ $(document).ready(function(){
   function back(){
     res.style.display = "none";
     res.style.top = "50px";
-    res.style.boxShadow = "0px 0px 3px black";
-    res.style.boxRadius = "20px";
+    // res.style.boxShadow = "0px 0px 3px black";
+    // res.style.boxRadius = "20px";
     $("#carousel1").show();
     $("#theSearch").show();
   

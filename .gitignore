@@ -19,3 +19,6 @@
 
 # Ignore precompilled assets. Or may be not... :)	
 # /public/assets
+
+# Ignore Mac OS X resource forks
+.DS_Store
