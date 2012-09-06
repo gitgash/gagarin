@@ -37,7 +37,7 @@ Ggr::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   
-  config.cache_store = :dalli_store, 'localhost',
+  config.cache_store = :dalli_store, '46.61.184.148',
       { :expires_in => 1.day, :compress => false }
   
 end
