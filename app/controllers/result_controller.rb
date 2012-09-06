@@ -25,7 +25,6 @@ class ResultController < ApplicationController
       u = uri.to_s
       u['/result.json'] = ''
       u['http://'] = ''
-      p "DEBUG+++++++++++++++++++++++++++++++++++++++++++++++++++++"+u
 
       unless doc.xpath('//query').blank?
         h = {}
@@ -55,8 +54,9 @@ class ResultController < ApplicationController
       
       #save this object for later use
       keys = URI::split(request.url)
-      key="#{keys[5]}/#{keys[7]}"
-      Rails.cache.write(key, response.body.to_s)
+      key="SPUTNIKQUERY/#{params[:search]}"
+      v = Rails.cache.write(key, response.body.to_s, :timeToLive => 1.day)
+      p "DEBUG========================================= write v=#{v} key=#{key}"
     end
     
     respond_to do |format|
@@ -70,8 +70,9 @@ class ResultController < ApplicationController
       format.html {
         #read saved sputnik responce
         keys = URI::split(request.url)
-        key="#{keys[5]}/#{keys[7]}"
+        key="SPUTNIKQUERY/#{params[:search]}"
         xml = Rails.cache.read(key)
+        p "DEBUG================================= key = #{key} xml nil?#{xml==nil}"
         
         doc  = Nokogiri::XML(xml)
 
