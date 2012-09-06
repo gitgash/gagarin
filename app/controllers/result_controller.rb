@@ -23,9 +23,22 @@ class ResultController < ApplicationController
       u['/result.json'] = ''
       u['http://'] = ''
       p "DEBUG+++++++++++++++++++++++++++++++++++++++++++++++++++++"+u
-      doc.xpath('//query').each do |q|
-        ret << "#{result_section_path(:id => q['collection'])}.jpg?search=#{URI.encode params[:search]}"
-        ret <<  u + "#{result_section_path(:id => q['collection'])}.html?search=#{URI.encode params[:search]}"
+
+      unless doc.xpath('//query').blank?
+        doc.xpath('//query').each do |q|
+          ret << "#{result_section_path(:id => q['collection'])}.jpg?search=#{URI.encode params[:search]}"
+          ret <<  u + "#{result_section_path(:id => q['collection'])}.html?search=#{URI.encode params[:search]}"
+        end
+        puts "------- #{ret}"
+      else
+        # самая простая костыльная реализация
+        ret = [
+          "/result/section/18.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/18.html?search=xuyandzhopenotfound",
+          "/result/section/16.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/16.html?search=xuyandzhopenotfound",
+          "/result/section/2223.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/2223.html?search=xuyandzhopenotfound",
+          "/result/section/17.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/17.html?search=xuyandzhopenotfound",
+          "/result/section/31.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/31.html?search=xuyandzhopenotfound"
+        ]
       end
 
     end
