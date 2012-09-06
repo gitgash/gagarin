@@ -37,11 +37,11 @@ class ResultController < ApplicationController
       else
         # самая простая костыльная реализация
         ret = [
-          "/result/section/18.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/18.html?search=xuyandzhopenotfound",
-          "/result/section/16.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/16.html?search=xuyandzhopenotfound",
-          "/result/section/2223.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/2223.html?search=xuyandzhopenotfound",
-          "/result/section/17.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/17.html?search=xuyandzhopenotfound",
-          "/result/section/31.jpg?search=xuyandzhopenotfound", "localhost:3000/result/section/31.html?search=xuyandzhopenotfound"
+          "/result/section/18.jpg?search=xuyandzhopenotfound", "#{u}/result/section/18.html?search=xuyandzhopenotfound",
+          "/result/section/16.jpg?search=xuyandzhopenotfound", "#{u}/result/section/16.html?search=xuyandzhopenotfound",
+          "/result/section/2223.jpg?search=xuyandzhopenotfound", "#{u}/result/section/2223.html?search=xuyandzhopenotfound",
+          "/result/section/17.jpg?search=xuyandzhopenotfound", "#{u}/result/section/17.html?search=xuyandzhopenotfound",
+          "/result/section/31.jpg?search=xuyandzhopenotfound", "#{u}/result/section/31.html?search=xuyandzhopenotfound"
         ]
       end
       
