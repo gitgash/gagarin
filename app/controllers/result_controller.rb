@@ -2,8 +2,12 @@ require 'net/http'
 require 'nokogiri'
 require 'uri'
 require 'imgkit'
+require 'dalli'
 
 class ResultController < ApplicationController
+  #before_filter :cach_cash
+  caches_action :index, :section, :cache_path => Proc.new { |controller| controller.params }
+  
   def index
     
     
@@ -93,5 +97,13 @@ class ResultController < ApplicationController
       }
     end
   end
+  
+  # protected
+  # def cach_cash
+  #   keys = URI::split(request.url)
+  #   p "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++DEBUG keys[5]="+keys[5] if keys[5] != nil
+  #   p "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++DEBUG keys[7]="+keys[7] if keys[7] != nil
+  #   p "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++DEBUG key="+"#{keys[5]}/#{keys[7]}"
+  # end
     
 end
