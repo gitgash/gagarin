@@ -1,11 +1,6 @@
+var unvisible;
 $(document).ready(function(){
 	init_carusel();
-
-  $(document).keydown(function(event){
-  if(event.keyCode==13){
-    search();
-  }
-  });
 
   function init_carusel(){
   	$("#carousel1").CloudCarousel(		
@@ -62,8 +57,9 @@ $(document).ready(function(){
           for(var i=0;i<data.length;i+=2){
             id_page = Math.random()*5;
             massiv[j]=i+1;
-  	  	    carusel.innerHTML+="<img class = 'cloudcarousel' src='"+(data[i])+"' onClick='unvisible(\""+(data[i+1])+"\","+(i+1)+")'/>";
-            $("#"+(i+1)).load('http://'+data[i+1]);
+            // carusel.innerHTML+="<img class='cloudcarousel' src='"+(data[i])+"' onClick='unvisible(\""+(data[i+1])+"\","+(i+1)+")'/>";
+  	  	    carusel.innerHTML += "<img class='cloudcarousel' src='"+(data[i])+"' data-src=\""+(data[i+1])+"\" data-id=\""+(i+1)+"\"/>";
+            $("#"+(i+1)).load('http://'+data[i+1]+'&fordiv=1');
             j++;
           }
   		    init_carusel();
@@ -74,8 +70,10 @@ $(document).ready(function(){
   };
   
   function unvisible(src,id){
-    document.getElementById("carousel1").style.visibility = "hidden";
-    document.getElementById("theSearch").style.visibility = "hidden";
+    // document.getElementById("carousel1").style.visibility = "hidden";
+    // document.getElementById("theSearch").style.visibility = "hidden";
+    $("#carousel1").hide();
+    $("#theSearch").hide();
     res = document.getElementById(""+id);
     res.style.display = "block";
   };
@@ -85,8 +83,22 @@ $(document).ready(function(){
     res.style.top = "50px";
     res.style.boxShadow = "0px 0px 3px black";
     res.style.boxRadius = "20px";
-    document.getElementById("carousel1").style.visibility = "visible";
-    document.getElementById("theSearch").style.visibility = "visible";
+    $("#carousel1").show();
+    $("#theSearch").show();
   
   };
+  
+  $('.submit-button').click(search);
+
+  $('.backButton').live('click', back);
+
+  $('.cloudcarousel').live('click', function() {
+    unvisible($(this).data('src'), $(this).data('id'));
+  });
+
+  $(document).keydown(function(event){
+    if(event.keyCode==13){
+      search();
+    }
+  });
 });

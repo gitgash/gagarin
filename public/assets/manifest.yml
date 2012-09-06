@@ -1,15 +1,18 @@
 ---
 background.gif: background-e9b899eea05644b7737e26be568cce92.gif
 bolt.jpg: bolt-c7767c462f3179bfd835baf83f0ccad3.jpg
+bolt.png: bolt-a7fa05b6cf97724169e94b6fe67c5ac4.png
 head_icon.png: head_icon-3a9fe8527d9601d057bf0f58c80f652c.png
 img_logo.png: img_logo-4493e8d4d764e2a9120cfa0aaaa6e0d5.png
 pod.png: pod-d738882d28f3057659296c2d7b2c1ceb.png
 rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
 spinner.gif: spinner-117bebaf63ba30278f58571a3357bb68.gif
+spinner.png: spinner-09b153eb00d8007241748a13779c5f61.png
+spinner_black.png: spinner_black-0f2f63ad69841642a80e72c867f658ee.png
 sputnik.png: sputnik-186009cc5f64fc920fb01e8daaf64840.png
 video_logo.png: video_logo-f09a2df27e8aa5773a488dbcf89a6d0f.png
 application.js: application-58a20c0c3a9fbe0ea8e233b056fe5203.js
 cloud-carousel.js: cloud-carousel-2b0c501b855b8e551741c6402c09cfaf.js
 mousewheel.js: mousewheel-480d4a3be4923f074a06430dad06a08e.js
-welcome.js: welcome-ce4787e4f17c59061beeea10630f7702.js
-application.css: application-33b31d43c60da7ec3718552e3606bebe.css
+welcome.js: welcome-1719a63d666a8fbf0d13405cc601ad7c.js
+application.css: application-bc417160baae70c8e1454cd9328f0f29.css

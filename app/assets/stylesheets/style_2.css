@@ -9,7 +9,7 @@ body, html {
 	-o-background-size: cover;
 }
 .b-project {
-	float: left;
+/*  float: left;*/
 	overflow: hidden;
 }
 .b-output {
@@ -104,13 +104,18 @@ a {
 #spinner {
   z-index:4;
   position: fixed;
-  top: 10%;
+  top: 40%;
   left: 50%;
-  margin-left: -283px;
-  width:567px;
+  margin-left: -50px;
+  width:100px;
   margin-top:70px;
   display: none;
 }
 
+.centered {
+  text-align: center;
+}
 
-
+h2 {
+  clear: both;
+}
