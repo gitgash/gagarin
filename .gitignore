@@ -22,3 +22,5 @@
 
 # Ignore Mac OS X resource forks
 .DS_Store
+
+/config/deploy.rb
