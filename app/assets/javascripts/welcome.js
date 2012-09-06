@@ -20,7 +20,7 @@ $(document).ready(function(){
 
   var str1="";
   var result;
-  var res;
+  var res, img, img_css;
 
   var massiv = new Array();
 
@@ -61,16 +61,32 @@ $(document).ready(function(){
     });
   };
   
-  function unvisible(src, id) {
-    $("#carousel1").hide();
-    $("#theSearch").hide();
-    res = $("#div" + id).show();
+  function unvisible(obj) {
+    res = $("#div" + obj.data('id'));
+    img = obj;
+    img_css = {
+      top: img.offset().top,
+      left: img.offset().left,
+      width: img.width(),
+      height: img.height()
+    };
+    img.appendTo('body').animate({
+      top: 5,
+      left: $('body').width() / 2 - 630 / 2,
+      width: 630,
+      height: 635,
+    }, function() {
+      res.show();//fadeIn();
+    });
+    $("#carousel1").fadeOut();
+    $("#theSearch").fadeOut();
   };
 
   function back() {
-    res.hide();
-    $("#carousel1").show();
-    $("#theSearch").show();
+    res.fadeOut();
+    img.appendTo('#carousel1').animate(img_css);
+    $("#carousel1").fadeIn();
+    $("#theSearch").fadeIn();
   };
   
   $('.submit-button').click(search);
@@ -78,7 +94,7 @@ $(document).ready(function(){
   $('.backButton').live('click', back);
 
   $('.cloudcarousel').live('click', function() {
-    unvisible($(this).data('src'), $(this).data('id'));
+    unvisible($(this));
   });
 
   $(document).keydown(function(event){

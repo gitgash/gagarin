@@ -112,7 +112,7 @@
 		}
 		// Turn on relative position for container to allow absolutely positioned elements
 		// within it to work.
-		$(container).css({ position:'relative', overflow:'hidden'} );
+		$(container).css({ position:'absolute', overflow:'hidden'} );
 	
 		$(options.buttonLeft).css('display','inline');
 		$(options.buttonRight).css('display','inline');
@@ -273,8 +273,8 @@
 				if (item.imageOK)
 				{
 					var	img = item.image;
-					w = img.width = item.orgWidth * scale;					
-					h = img.height = item.orgHeight * scale;
+					img.style.width = (w = img.width = item.orgWidth * scale) + px;					
+					img.style.height = (h = img.height = item.orgHeight * scale) + px;
 					img.style.left = x + px ;
 					img.style.top = y + px;
 					img.style.zIndex = "" + (scale * 100)>>0;	// >>0 = Math.foor(). Firefox doesn't like fractional decimals in z-index.

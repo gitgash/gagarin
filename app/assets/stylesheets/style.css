@@ -206,7 +206,8 @@ h2 {
 }
 
 #carousel1 {
-  position:relative;
+  position:absolute;
+  top: 0;
   width:1024px;
   height:512px;
   overflow:scroll;

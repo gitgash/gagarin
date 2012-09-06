@@ -102,10 +102,10 @@ class ResultController < ApplicationController
               end,
           }
         end
-        @section_code=params[:id]
+        @section_code = params[:id]
         
         render
-        }
+      }
       format.jpg  {
         #let imgkit load html from current host and convert
         #write jpg out
