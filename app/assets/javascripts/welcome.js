@@ -1,4 +1,3 @@
-var unvisible;
 $(document).ready(function(){
 	init_carusel();
 
@@ -20,7 +19,7 @@ $(document).ready(function(){
 
   var str1="";
   var result;
-  var res, img, img_css;
+  var res, img, img_css, clickAllowed = true;
 
   var massiv = new Array();
 
@@ -62,29 +61,35 @@ $(document).ready(function(){
   };
   
   function unvisible(obj) {
-    res = $("#div" + obj.data('id'));
-    img = obj;
-    img_css = {
-      top: img.offset().top,
-      left: img.offset().left,
-      width: img.width(),
-      height: img.height()
-    };
-    img.appendTo('body').animate({
-      top: 5,
-      left: $('body').width() / 2 - 630 / 2,
-      width: 630,
-      height: 635,
-    }, function() {
-      res.show();//fadeIn();
-    });
-    $("#carousel1").fadeOut();
-    $("#theSearch").fadeOut();
+    if (clickAllowed) {
+      res = $("#div" + obj.data('id'));
+      img = obj;
+      img_css = {
+        top: img.offset().top,
+        left: img.offset().left,
+        width: img.width(),
+        height: img.height()
+      };
+      img.appendTo('body').animate({
+        top: 5,
+        left: $('body').width() / 2 - 630 / 2,
+        width: 630,
+        height: 635,
+      }, function() {
+        res.show();//fadeIn();
+      });
+      $("#carousel1").fadeOut().data('cloudcarousel').stop();
+      $("#theSearch").fadeOut();
+      clickAllowed = false;
+    }
   };
 
   function back() {
     res.fadeOut();
-    img.appendTo('#carousel1').animate(img_css);
+    img.appendTo('#carousel1').animate(img_css, function(){
+      $("#carousel1").data('cloudcarousel').go();
+      clickAllowed = true;
+    });
     $("#carousel1").fadeIn();
     $("#theSearch").fadeIn();
   };
