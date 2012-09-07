@@ -1,0 +1,22 @@
+<div class="l-projects l-projects_shadow">
+    <h2><a href="http://0.sputnik.ru/">Интернет</a></h2>
+  <p class="centered">
+
+<b>По Вашему запросу ничего не найдено. Пожалуйста, уточните фразу и начните поиск снова.</b>
+</p>
+<p> Нам не дано предугадать,
+Как слово наше отзовется, –
+И нам сочувствие дается,
+Как нам дается благодать...
+    </p>
+    
+    <p>qwertfdsdfdsdgd</p>
+  Федор Тютчев, 1869
+ <div class="submit-block backButtonWrapper">
+      <div class="ui-btn ui-shadow ui-btn-corner-all ui-fullsize ui-btn-block ui-btn-up-c" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="" data-iconpos="" data-theme="c" data-inline="false" data-mini="false" aria-disabled="false">
+        <span class="ui-btn-inner ui-btn-corner-all">
+        <input class="submit-button ui-btn-hidden backButton" value="Назад" aria-disabled="false" type="button">
+      </span></div>
+    </div>
+
+</div>
