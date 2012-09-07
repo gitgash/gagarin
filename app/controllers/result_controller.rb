@@ -44,7 +44,7 @@ class ResultController < ApplicationController
       else
         # самая простая костыльная реализация
         ret = [
-          "/profanity.jpg", "#{u}/profanity.html?fordiv=1",
+          "/profanity.jpg", "#{u}/profanity.html",
           "/result/section/2223.jpg?search=xuyandzhopenotfound", "#{u}/result/section/2223.html?search=xuyandzhopenotfound",
           "/result/section/16.jpg?search=xuyandzhopenotfound", "#{u}/result/section/16.html?search=xuyandzhopenotfound",
           "/result/section/18.jpg?search=xuyandzhopenotfound", "#{u}/result/section/18.html?search=xuyandzhopenotfound",

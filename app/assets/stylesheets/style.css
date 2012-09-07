@@ -235,3 +235,16 @@ h2 {
   right: 12px;
 }
 
+.poem {
+  font-size: 2em;
+  font-family: Georgia, serif;
+  font-style: italic;
+  margin: 100px;
+}
+
+.poem .author {
+  text-align: right;
+  font-size: 0.8em;
+}
+
+
