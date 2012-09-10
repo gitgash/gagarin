@@ -16,7 +16,7 @@ class ResultController < ApplicationController
     http_session.start do |http| 
       req = Net::HTTP::Get.new("/search?q=#{URI.encode params[:search]}&xmlout=1")
       # req.basic_auth 'admin', 'SearchRF'
-      req.basic_auth 'html5', 'KvorumSLA'
+      # req.basic_auth 'html5', 'KvorumSLA'
       req.basic_auth 'rtk', 'KapitanLTE'
       response = http.request(req)
       doc  = Nokogiri::XML(response.body.to_s)
