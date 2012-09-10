@@ -42,9 +42,11 @@ $(document).ready(function(){
     carusel.style.display = "none";
     $('#spinner').show();
     $.ajax({
-      type: "POST",
-      url: "result.json",
-      data: "search=" + str,
+      // type: "POST",
+      // url: "result.json",
+      // data: "search=" + str,
+      type: "GET",
+      url: "result.json?search=" + encodeURIComponent(str),
       success: function(msg){
         str1 = str;
         var data = eval(msg);
