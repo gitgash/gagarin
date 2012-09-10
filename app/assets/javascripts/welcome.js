@@ -46,7 +46,8 @@ $(document).ready(function(){
       // url: "result.json",
       // data: "search=" + str,
       type: "GET",
-      url: "result.json?search=" + encodeURIComponent(str),
+      url: "result.json",
+      data: { search: str},
       success: function(msg){
         str1 = str;
         var data = eval(msg);

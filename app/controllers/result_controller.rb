@@ -26,7 +26,7 @@ class ResultController < ApplicationController
       #collect sections
       uri = URI(request.url)
       u = uri.to_s
-      u['/result.json'] = ''
+      u[/\/result\.json.*$/] = ''
       u['http://'] = ''
 
       unless doc.xpath('//query').blank?
