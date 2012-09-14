@@ -8,7 +8,9 @@ require 'dalli'
 
 class ResultController < ApplicationController
   #before_filter :cach_cash
+  before_filter :downcase_search_string  
   caches_action :index, :section, :cache_path => Proc.new { |controller| controller.params }
+  
   
   def index
     ret = nil
@@ -134,5 +136,11 @@ class ResultController < ApplicationController
   #   p "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++DEBUG keys[7]="+keys[7] if keys[7] != nil
   #   p "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++DEBUG key="+"#{keys[5]}/#{keys[7]}"
   # end
+
+  private
+  
+  def downcase_search_string
+    params[:search] = params[:search].mb_chars.downcase.to_s  unless params[:search].blank?
+  end
     
 end

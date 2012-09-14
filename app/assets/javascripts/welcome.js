@@ -32,8 +32,8 @@ $(document).ready(function(){
     var result  = document.getElementById("result");
     var j = 0;
   
-  	carusel.style.width=document.body.clientWidth+"px";
-    carusel.style.height=(document.body.clientHeight - 10)+"px";
+  	carusel.style.width  = document.body.clientWidth + "px";
+    carusel.style.height = document.body.clientHeight + "px";
 	
     if (str1 == str) {
       carusel.innerHTML = '';
@@ -48,7 +48,7 @@ $(document).ready(function(){
       type: "GET",
       url: "result.json",
       data: { search: str},
-      success: function(msg){
+      success: function(msg) {
         str1 = str;
         var data = eval(msg);
         carusel.innerHTML = "";
